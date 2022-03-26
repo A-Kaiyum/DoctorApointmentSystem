@@ -2,7 +2,7 @@
     <div class="row align-items-center justify-content-between">
         <div class="col-auto">
             <div class="logo">
-                <a href="{{route('index')}}">
+                <a href="{{route('frontend.index')}}">
                     <img src="{{asset('assets/frontend')}}/images/logo/logo.png" alt="logo">
                 </a>
             </div>

@@ -1,5 +1,5 @@
 @extends('backend.layouts.master')
-@section('title','Police')
+@section('title','Find Donner')
 @section('content')
     <div class="col-lg-12">
         <div class="card">
@@ -7,7 +7,7 @@
 
                 <div class="d-flex justify-content-between align-items-center">
                     <h3 class="card-title">Create post</h3>
-                    <a href="{{route('police.index')}}" class="btn btn-primary"> Go Back</a>
+                    <a href="{{route('findDoner.index')}}" class="btn btn-primary"> Go Back</a>
                 </div>
             </div>
             <!-- /.card-header -->
@@ -16,19 +16,31 @@
                     <tbody>
                     <tr>
                         <th style="width:200px">Name</th>
-                        <td>{{$police->name}}</td>
+                        <td>{{$findDoner->name}}</td>
                     </tr>
                     <tr>
                         <th style="width:200px">Email</th>
-                        <td>{{$police->email}}</td>
+                        <td>{{$findDoner->email}}</td>
                     </tr>
                     <tr>
                         <th style="width:200px">Phone</th>
-                        <td>{{$police->phone}}</td>
+                        <td>{{$findDoner->phone}}</td>
+                    </tr>
+                    <tr>
+                        <th style="width:200px">Address</th>
+                        <td>{{$findDoner->address}}</td>
+                    </tr>
+                    <tr>
+                        <th style="width:200px">Last Donation</th>
+                        <td>{{$findDoner->last_donate}}</td>
+                    </tr>
+                    <tr>
+                        <th style="width:200px">Blood Group</th>
+                        <td>{{$findDoner->bloodgroup}}</td>
                     </tr>
                     <tr>
                         <th style="width:200px">Message</th>
-                        <td>{!! $police->message !!}</td>
+                        <td>{!! $findDoner->message !!}</td>
                     </tr>
 
                     </tbody>
@@ -44,5 +56,6 @@
     </div>
 
 @endsection
+
 
 

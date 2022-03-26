@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-auto">
                 <div class="logo">
-                    <a href="{{route('index')}}">
+                    <a href="{{route('frontend.index')}}">
                         <img src="{{asset('assets/frontend')}}/images/logo/logo.png" alt="logo">
                     </a>
                 </div>
@@ -11,7 +11,7 @@
             <div class="col-auto offset-1">
                 <nav class="main__menu__nav">
                     <ul class="main__menu">
-                        <li class="drop"><a href="{{route('index')}}">Home</a>
+                        <li class="drop"><a href="{{route('frontend.index')}}">Home</a>
                         </li>
                         <li class="drop"><a href="{{route('about')}}">About</a></li>
                         <li class="drop"><a href="{{route('service')}}">Services</a>

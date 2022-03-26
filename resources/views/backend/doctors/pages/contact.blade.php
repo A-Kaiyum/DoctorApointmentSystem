@@ -1,5 +1,5 @@
 @extends('backend.layouts.master')
-@section('title','Police')
+@section('title','Contact')
 @section('content')
 
     <div class="container-fluid">
@@ -8,7 +8,7 @@
                 <div class="card">
                     <div class="card-header">
                         <div class="d-flex justify-content-between align-items-center">
-                            <h3 class="card-title">police</h3>
+                            <h3 class="card-title">contact</h3>
                             <a href="#" class="btn btn-primary"> Go Back</a>
                         </div>
                     </div>
@@ -21,29 +21,29 @@
                                 <th>Name</th>
                                 <th>Email</th>
                                 <th>Phone</th>
-                                <th>police</th>
+                                <th>contact</th>
                                 <th style="width: 40px">Action</th>
 
                             </tr>
                             </thead>
                             <tbody>
-                            @if($polices->count()>0)
+                            @if($contacts->count()>0)
                                 <?php $sl = 1; ?>
-                                @foreach($polices as $police)
+                                @foreach($contacts as $contact)
                                     <tr>
                                         <td>{{$sl}}</td>
-                                        <td>{{$police->name}}</td>
-                                        <td>{{$police->email}}</td>
-                                        <td>{{$police->phone}}</td>
-                                        <td>{!! \Illuminate\Support\Str::limit($police->message,20) !!}</td>
+                                        <td>{{$contact->name}}</td>
+                                        <td>{{$contact->email}}</td>
+                                        <td>{{$contact->phone}}</td>
+                                        <td>{!! \Illuminate\Support\Str::limit($contact->message,20) !!}</td>
                                         <td class="d-flex">
 
-                                            <form action="{{route('police.destroy',[$police->id])}}" method="post">
+                                            <form action="{{route('admin.contact.destroy',[$contact->id])}}" method="post">
                                                 @method('DELETE')
                                                 @csrf
                                                 <button type="submit" class="btn btn-sm btn-danger mr-1"><i class="fas fa-trash"></i></button>
                                             </form>
-                                            <a href="{{route('police.show',[$police->id])}}" class="btn btn-sm btn-success mr-1"> <i class="fas fa-eye"></i></a>
+                                            <a href="{{route('admin.contact.show',[$contact->id])}}" class="btn btn-sm btn-success mr-1"> <i class="fas fa-eye"></i></a>
                                         </td>
                                     </tr>
                                     <?php $sl++; ?>
@@ -51,7 +51,7 @@
                             @else
                                 <tr>
                                     <td colspan="6">
-                                        <h5 class="text-center">No police Found</h5>
+                                        <h5 class="text-center">No contact Found</h5>
                                     </td>
                                 </tr>
                             @endif

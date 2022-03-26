@@ -1,6 +1,6 @@
 <div class="offcanvas-header">
     <!-- Start Header Logo -->
-    <a href="{{route('index')}}" class="header-logo"><img src="{{asset('assets/frontend')}}/images/logo/logo.png" alt=""></a>
+    <a href="{{route('frontend.index')}}" class="header-logo"><img src="{{asset('assets/frontend')}}/images/logo/logo.png" alt=""></a>
     <!-- End Header Logo -->
     <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
 </div>
@@ -13,7 +13,7 @@
             <div class="offcanvas-menu">
                 <ul>
                     <li>
-                        <a href="{{route('index')}}"><span>Home</span></a>
+                        <a href="{{route('frontend.index')}}"><span>Home</span></a>
                     </li>
                     <li><a href="{{route('about')}}">About</a></li>
                     <li>
