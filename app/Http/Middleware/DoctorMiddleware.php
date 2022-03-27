@@ -6,7 +6,7 @@ use Closure;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
-class Doctor
+class DoctorMiddleware
 {
     /**
      * Handle an incoming request.

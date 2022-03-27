@@ -1,5 +1,5 @@
 @extends('backend.layouts.master')
-@section('title','Doctor')
+@section('title','DoctorMiddleware')
 @section('content')
     <div class="col-lg-12">
         <div class="card">

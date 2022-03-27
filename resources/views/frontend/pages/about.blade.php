@@ -115,7 +115,7 @@
     </section>
     <!-- End Try Solve Area -->
 
-    <!--Specialized Doctor start-->
+    <!--Specialized DoctorMiddleware start-->
     <div class="specialized_doctor pt--80">
         <div class="container">
             <div class="row">
@@ -210,7 +210,7 @@
             </div>
         </div>
     </div>
-    <!--Specialized Doctor end-->
+    <!--Specialized DoctorMiddleware end-->
 
     <!--Our brand section -->
     <div class="our_brand_section ptb--100">

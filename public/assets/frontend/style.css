@@ -1,11 +1,11 @@
 /*--------------
   Template Name:  Curex - Medical Clinic Service Bootstrap 5 Template
   Description: Curex is a unique website template designed in HTML with a simple & beautiful look. There is an excellent solution for creating clean, wonderful and trending material design Medical, Clinic any other purposes websites.
-  Version: 2.0.0 
+  Version: 2.0.0
 
 
 ------------
-  
+
   CSS INDEX
   ===================
 
@@ -13,7 +13,7 @@
   02. Scroll To Top
   03. Header css here
   04. Slider css here
-  05. Footer css here 
+  05. Footer css here
   06. Support Area
   07. Try Solve Area
   08. Gallery Area
@@ -31,7 +31,7 @@
   20. Contact Area
   21. Single Service Area
   22. Mobile Menu Css here
-  23. Doctor Profile css
+  23. DoctorMiddleware Profile css
   23. Error Page css here
 
 ---------*/
@@ -695,7 +695,7 @@ color: #ea4335;
 .slider-content-covid .covid-hero-btn span{
   line-height: 1;
   margin-left: 10px;
-  
+
 }
 .slider-content-covid .covid-hero-btn:hover span{
   margin-left: : 20px;
@@ -771,7 +771,7 @@ color: #ea4335;
   top: 50%;
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
-  
+
 }
 .slider-wrapper.bg-opacity::before {
   background: rgba(0, 0, 0, 0) -webkit-gradient(linear, left top, right top, from(#26aef9), to(#22f285)) repeat scroll 0 0;
@@ -822,7 +822,7 @@ color: #ea4335;
 }
 .slider-content.slider-text-animation > a:hover::before{
   opacity: 1;
-} 
+}
 .slider-active.owl-carousel .owl-nav > div:hover {
   background: rgba(0, 0, 0, 0) -webkit-gradient(linear, left top, right top, from(#26aef9), to(#22f285)) repeat scroll 0 0;
   background: rgba(0, 0, 0, 0) linear-gradient(to right, #26aef9 0%, #22f285 100%) repeat scroll 0 0;
@@ -1264,8 +1264,8 @@ color: #ea4335;
     -webkit-transform: scale(1);
     transform: scale(1);
     opacity: .75;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=75)";  
-    
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=75)";
+
   }
   25% {
     -webkit-transform: scale(1);
@@ -1285,8 +1285,8 @@ color: #ea4335;
     -webkit-transform: scale(1);
     transform: scale(1);
     opacity: .75;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=75)";  
-    
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=75)";
+
   }
   25% {
     -webkit-transform: scale(1);
@@ -1311,7 +1311,7 @@ color: #ea4335;
   padding-top: 135px;
 }
 /*-------------
-    Specialized Doctor css here
+    Specialized DoctorMiddleware css here
 --------------*/
 .specialized_doctor .container {
 	max-width: 1400px;
@@ -1810,7 +1810,7 @@ color: #ea4335;
 }
 .htc__visit__inner {
     padding-right: 22%;
-} 
+}
 .htc__visit__inner h2 {
     line-height: 45px;
     margin-bottom: 13px;
@@ -2986,7 +2986,7 @@ border: 1px solid #fff;
   margin-top: 35px;
 }
 .single-services-wrap .service-icon{
-  
+
 }
 .single-services-wrap .service-content {
   margin-top: 25px;
@@ -2996,7 +2996,7 @@ border: 1px solid #fff;
   margin-bottom: 10px;
 }
 .single-services-wrap .service-content p {
-  
+
 }
 
 
@@ -3029,7 +3029,7 @@ border: 1px solid #fff;
   margin-left: 12px;
 }
 .play_video.style-two a i {
-  background: #57b6c0; 
+  background: #57b6c0;
 }
 
 .ourselves_banner--imgaes .play_video.style-two a {
@@ -3105,7 +3105,7 @@ border: 1px solid #fff;
 }
 .team:hover .team__hover__action {
     opacity: 1;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)"; 
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
 }
 .team__social__service {
     background: #efefef none repeat scroll 0 0;
@@ -4109,7 +4109,7 @@ h2.psy__blog__title {
   border-image: -webkit-linear-gradient(left, #26aef9 0%, #22f285 100%) 1 1 1;
   border-image: linear-gradient(to right, #26aef9 0%, #22f285 100%) 1 1 1;
   border-style: solid;
-  border-width: 1px;  
+  border-width: 1px;
 }
  .ui-widget-content .ui-datepicker-prev.ui-state-hover,.ui-widget-content .ui-datepicker-next.ui-state-hover{
   border: none;
@@ -5134,7 +5134,7 @@ a.ui-state-default {
 .pagination {
     display: block;
     margin: 0;
-    
+
 }
 .pagination_list ul li {
   border: 3px solid #d9d9d9;
@@ -5534,7 +5534,7 @@ blockquote {
 .search_form input::-moz-placeholder {
     font-size: 18px;
     opacity: 0.5;
-    
+
 }
 .search_form {
     position: relative;
@@ -5556,7 +5556,7 @@ blockquote {
   right: 0;
   top: 12px;
   width: 50px;
-  transition: all 0.3s ease-out 0s;  
+  transition: all 0.3s ease-out 0s;
 }
 
 .search_form button:hover {
@@ -5565,7 +5565,7 @@ blockquote {
 
 .post_categories li {
     display: block;
-   
+
 }
 .post_categories li:last-child a{
     border: medium none;
@@ -5688,7 +5688,7 @@ blockquote {
 .mean-container .mean-nav ul li a {
   font-size: 13px;
 }
-/*--- 23. Doctor Profile css ---*/
+/*--- 23. DoctorMiddleware Profile css ---*/
 .doctor_details_pages.pt-110 {
 	padding-top: 110px;
 }

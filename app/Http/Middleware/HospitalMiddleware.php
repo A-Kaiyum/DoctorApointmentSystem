@@ -6,7 +6,7 @@ use Closure;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
-class Admin
+class HospitalMiddleware
 {
     /**
      * Handle an incoming request.
@@ -17,7 +17,7 @@ class Admin
      */
     public function handle(Request $request, Closure $next)
     {
-        if (Auth::check() && (Auth::user()->user_type == 'admin')) {
+        if (Auth::check() && (Auth::user()->user_type == 'hospital')) {
             return $next($request);
         }
         else{

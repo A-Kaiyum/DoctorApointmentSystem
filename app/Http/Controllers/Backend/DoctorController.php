@@ -14,7 +14,7 @@ class DoctorController extends Controller
         return view('backend.pages.doctorMessage',compact('doctors'));
     }
     public function show(Doctor $doctor){
-        //$doctor = Doctor::where('id',$doctor_id)->get();
+        //$doctor = DoctorMiddleware::where('id',$doctor_id)->get();
         return view('backend.pages.showDoctorMessage',compact('doctor'));
     }
     public function destroy(Doctor $doctor){

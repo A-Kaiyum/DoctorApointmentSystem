@@ -30,7 +30,7 @@ Auth::routes();
 //Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 
-
+//  frontend Routes
 
 Route::get('/', [FrontendController::class, 'index'])->name('frontend.index');
 Route::get('about-us', [FrontendController::class, 'about'])->name('about');
@@ -42,18 +42,6 @@ Route::get('contact-us', [FrontendController::class, 'contact'])->name('contact'
 Route::get('dr-details', [FrontendController::class, 'drProfile'])->name('drProfile');
 Route::get('hospital', [FrontendController::class, 'hospital'])->name('hospital');
 
-// Backend Routes
-
-//Route::group(['prefix' => 'admin/', 'as' => 'admin.', 'middleware' => ['auth']], function () {
-//
-//    Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
-//    Route::resource('category',CategoryController::class);
-//    Route::resource('tag',TagController::class);
-//    Route::resource('post',PostController::class);
-//    Route::resource('contact',ContactController::class);
-//    Route::resource('user',UserController::class);
-//
-//});
 
 Route::get('/', function () {
     // return view('welcome');
@@ -80,3 +68,5 @@ Route::get('/', function () {
 
 require __DIR__.'/admin.php';
 require __DIR__.'/doctor.php';
+require __DIR__.'/hospital.php';
+require __DIR__.'/patient.php';
