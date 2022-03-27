@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   @include('backend.layouts._head')
+   @include('backend.patients.layouts._head')
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
 
     <!-- Navbar -->
-    @include('backend.layouts._navbar')
+    @include('backend.patients.layouts._navbar')
     <!-- /.navbar -->
 
     <!-- Main Sidebar Container -->
 
-        @include('backend.layouts._sidebar')
+        @include('backend.patients.layouts._sidebar')
 
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
         <!-- Content Header (Page header) -->
-        @include('backend.layouts._contentHeader')
+        @include('backend.patients.layouts._contentHeader')
         <!-- /.content-header -->
 
         <!-- Main content -->
@@ -29,7 +29,7 @@
     </div>
     <!-- /.content-wrapper -->
     <footer class="main-footer">
-        @include('backend.layouts._footer')
+        @include('backend.patients.layouts._footer')
     </footer>
 
     <!-- Control Sidebar -->
@@ -41,6 +41,6 @@
 <!-- ./wrapper -->
 
 <!-- jQuery -->
-@include('backend.layouts._scripts')
+@include('backend.patients.layouts._scripts')
 </body>
 </html>

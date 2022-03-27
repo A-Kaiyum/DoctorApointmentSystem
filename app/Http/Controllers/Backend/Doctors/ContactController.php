@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Backend;
+namespace App\Http\Controllers\Backend\Doctors;
 
 use App\Models\Contact;
 use App\Http\Controllers\Controller;

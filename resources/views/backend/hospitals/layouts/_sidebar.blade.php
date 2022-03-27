@@ -1,8 +1,7 @@
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
 <!-- Brand Logo -->
 <a href="{{route('hospital.dashboard')}}" class="brand-link">
-    <img src="" alt="hospitalLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-    <span class="brand-text font-weight-light">Hospital</span>
+    <img src="{{asset('assets/backend/uploads/images/logo.png')}}" alt="logo">
 </a>
 
 <!-- Sidebar -->
@@ -76,14 +75,14 @@
             <li class="nav-item">
                 <a href="{{route('hospital.user.index')}}" class="nav-link">
                     <i class="fas fa-user nav-icon"></i>
-                    <p>User List</p>
+                    <p>Patient List</p>
                 </a>
             </li>
             <li class="nav-item">
                 <a href="{{route('hospital.contact.index')}}" class="nav-link">
                     <i class="fas fa-envelope nav-icon"></i>
                     <p>
-                        Message
+                        Inbox
 
                     </p>
                 </a>
@@ -97,7 +96,7 @@
                     <li class="nav-item">
                         <a href="" class="nav-link">
                             <i class="fas fa-shuttle-van nav-icon"></i>
-                            <p>Police</p>
+                            <p>Patient</p>
                         </a>
                     </li>
                     <li class="nav-item">

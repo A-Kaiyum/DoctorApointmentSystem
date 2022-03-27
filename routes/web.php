@@ -55,7 +55,14 @@ Route::get('/', function () {
         if(Auth::user()->user_type == 'doctor')
         {
             return redirect()->route('doctor.dashboard');
-        }
+        }if(Auth::user()->user_type == 'hospital')
+    {
+        return redirect()->route('hospital.dashboard');
+    }
+        if(Auth::user()->user_type == 'patient')
+    {
+        return redirect()->route('patient.dashboard');
+    }
     }
     else
     {

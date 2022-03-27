@@ -1,7 +1,12 @@
 <?php
 
 
+use App\Http\Controllers\Backend\Hospital\CategoryController;
+use App\Http\Controllers\Backend\Hospital\ContactController;
 use App\Http\Controllers\Backend\Hospital\DashboardController;
+use App\Http\Controllers\Backend\Hospital\PostController;
+use App\Http\Controllers\Backend\Hospital\TagController;
+use App\Http\Controllers\Backend\Hospital\UserController;
 use Illuminate\Support\Facades\Route;
 
 Route::group(['prefix' => 'hospital/', 'as' => 'hospital.', 'middleware' => ['auth','hospital']], function () {
