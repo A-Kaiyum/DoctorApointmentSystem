@@ -35,6 +35,7 @@ class RedirectIfAuthenticated
                 elseif(Auth::user()->user_type == 'patient'){
                     return redirect()->intended(RouteServiceProvider::Patient);
                 }
+                
 
             }
         }

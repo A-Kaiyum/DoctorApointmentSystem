@@ -1,5 +1,5 @@
 @extends('backend.layouts.master')
-@section('title','AdminMiddleware')
+@section('title','Admin')
 @section('content')
 
     <div class="container-fluid">
@@ -20,7 +20,7 @@
                 <!-- small box -->
                 <div class="small-box bg-success">
                     <div class="inner text-center">
-                        <h3>Total User</h3>
+                        <h3>Total Patient</h3>
                         <p>{{12}}</p>
                     </div>
                     <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
@@ -31,7 +31,7 @@
                 <!-- small box -->
                 <div class="small-box bg-warning">
                     <div class="inner text-center">
-                        <h3>Total Donner</h3>
+                        <h3>Total Doctor</h3>
 
                         <p>{{50}}</p>
                     </div>
@@ -46,7 +46,7 @@
                 <!-- small box -->
                 <div class="small-box bg-primary">
                     <div class="inner text-center">
-                        <h3>Total Doctor Provided</h3>
+                        <h3>Total Hospital</h3>
 
                         <p>{{30}}</p>
                     </div>
@@ -60,7 +60,7 @@
                 <!-- small box -->
                 <div class="small-box bg-warning">
                     <div class="inner text-center">
-                        <h3>Total Police Provided</h3>
+                        <h3>Total Blood Donner</h3>
 
                         <p>{{30}}</p>
                     </div>
