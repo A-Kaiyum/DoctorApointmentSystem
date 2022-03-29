@@ -57,7 +57,7 @@
                             </div>
                             <div class="blog_post__meta">
                                 <div class="post_author_img">
-                                    <a href="#"><img src="images/blog/latest_post/author_img_3.png" alt=""></a>
+                                    <a href="#"><img src="{{asset('assets/frontend')}}/images/blog/latest_post/author_img_3.png" alt=""></a>
                                 </div>
                                 <div class="post_content">
                                     <div class="author_tile">
@@ -77,18 +77,18 @@
                 <div class="grid-item col-lg-4 col-md-6 col-12">
                     <div class="single_latest_post mb--30">
                         <div class="ht__blog__thumb">
-                            <a href="blog-details.html">
-                                <img src="images/blog/latest_post/4.jpg" alt="blog images">
+                            <a href="{{route('singleBlog')}}">
+                                <img src="{{asset('assets/frontend')}}/images/blog/latest_post/4.jpg" alt="blog images">
                             </a>
                         </div>
                         <div class="htc__blog__content">
                             <div class="blog__post_title">
-                                <h2><a href="blog-details.html">Helping Children Deal With Trauma</a></h2>
+                                <h2><a href="{{route('singleBlog')}}">Helping Children Deal With Trauma</a></h2>
                                 <p>There are many variations of passages of Lorem Ipsum available.</p>
                             </div>
                             <div class="blog_post__meta">
                                 <div class="post_author_img">
-                                    <a href="#"><img src="images/blog/latest_post/author_img_3.png" alt=""></a>
+                                    <a href="#"><img src="{{asset('assets/frontend')}}/images/blog/latest_post/author_img_3.png" alt=""></a>
                                 </div>
                                 <div class="post_content">
                                     <div class="author_tile">
@@ -108,19 +108,19 @@
                 <div class="grid-item col-lg-4 col-md-6 col-12">
                     <div class="single_latest_post mb--30">
                         <div class="ht__blog__thumb">
-                            <a href="blog-details.html">
-                                <img src="images/blog/latest_post/5.jpg" alt="blog images">
+                            <a href="{{route('singleBlog')}}">
+                                <img src="{{asset('assets/frontend')}}/images/blog/latest_post/5.jpg" alt="blog images">
                             </a>
                         </div>
 
                         <div class="htc__blog__content">
                             <div class="blog__post_title">
-                                <h2><a href="blog-details.html">One Lorem ipsum dolor sit amet, consectetu</a></h2>
+                                <h2><a href="{{route('singleBlog')}}">One Lorem ipsum dolor sit amet, consectetu</a></h2>
                                 <p>There are many variations of passages of Lorem Ipsum available.</p>
                             </div>
                             <div class="blog_post__meta">
                                 <div class="post_author_img">
-                                    <a href="#"><img src="images/blog/latest_post/author_img_3.png" alt=""></a>
+                                    <a href="#"><img src="{{asset('assets/frontend')}}/images/blog/latest_post/author_img_3.png" alt=""></a>
                                 </div>
                                 <div class="post_content">
                                     <div class="author_tile">
@@ -140,19 +140,19 @@
                 <div class="grid-item col-lg-4 col-md-6 col-12">
                     <div class="single_latest_post mb--30">
                         <div class="ht__blog__thumb">
-                            <a href="blog-details.html">
-                                <img src="images/blog/latest_post/6.jpg" alt="blog images">
+                            <a href="{{route('singleBlog')}}">
+                                <img src="{{asset('assets/frontend')}}/images/blog/latest_post/6.jpg" alt="blog images">
                             </a>
                         </div>
 
                         <div class="htc__blog__content">
                             <div class="blog__post_title">
-                                <h2><a href="blog-details.html">A shadowy flight into the dangerous world</a></h2>
+                                <h2><a href="{{route('singleBlog')}}">A shadowy flight into the dangerous world</a></h2>
                                 <p>There are many variations of passages of Lorem Ipsum available.</p>
                             </div>
                             <div class="blog_post__meta">
                                 <div class="post_author_img">
-                                    <a href="#"><img src="images/blog/latest_post/author_img_3.png" alt=""></a>
+                                    <a href="#"><img src="{{asset('assets/frontend')}}/images/blog/latest_post/author_img_3.png" alt=""></a>
                                 </div>
                                 <div class="post_content">
                                     <div class="author_tile">
@@ -172,19 +172,19 @@
                 <div class="grid-item col-lg-4 col-md-6 col-12">
                     <div class="single_latest_post mb--30">
                         <div class="ht__blog__thumb">
-                            <a href="blog-details.html">
-                                <img src="images/blog/latest_post/7.jpg" alt="blog images">
+                            <a href="{{route('singleBlog')}}">
+                                <img src="{{asset('assets/frontend')}}/images/blog/latest_post/7.jpg" alt="blog images">
                             </a>
                         </div>
 
                         <div class="htc__blog__content">
                             <div class="blog__post_title">
-                                <h2><a href="blog-details.html">Ultra nanoparticles kill cancer cells in unusual way</a></h2>
+                                <h2><a href="{{route('singleBlog')}}">Ultra nanoparticles kill cancer cells in unusual way</a></h2>
                                 <p>There are many variations of passages of Lorem Ipsum available.</p>
                             </div>
                             <div class="blog_post__meta">
                                 <div class="post_author_img">
-                                    <a href="#"><img src="images/blog/latest_post/author_img_3.png" alt=""></a>
+                                    <a href="#"><img src="{{asset('assets/frontend')}}/images/blog/latest_post/author_img_3.png" alt=""></a>
                                 </div>
                                 <div class="post_content">
                                     <div class="author_tile">
@@ -204,19 +204,19 @@
                 <div class="grid-item col-lg-4 col-md-6 col-12">
                     <div class="single_latest_post mb--30">
                         <div class="ht__blog__thumb">
-                            <a href="blog-details.html">
-                                <img src="images/blog/latest_post/8.jpg" alt="blog images">
+                            <a href="{{route('singleBlog')}}">
+                                <img src="{{asset('assets/frontend')}}/images/blog/latest_post/8.jpg" alt="blog images">
                             </a>
                         </div>
 
                         <div class="htc__blog__content">
                             <div class="blog__post_title">
-                                <h2><a href="blog-details.html">Eye lens regeneration from own stem cells</a></h2>
+                                <h2><a href="{{route('singleBlog')}}">Eye lens regeneration from own stem cells</a></h2>
                                 <p>There are many variations of passages of Lorem Ipsum available.</p>
                             </div>
                             <div class="blog_post__meta">
                                 <div class="post_author_img">
-                                    <a href="#"><img src="images/blog/latest_post/author_img_3.png" alt=""></a>
+                                    <a href="#"><img src="{{asset('assets/frontend')}}/images/blog/latest_post/author_img_3.png" alt=""></a>
                                 </div>
                                 <div class="post_content">
                                     <div class="author_tile">
@@ -236,19 +236,19 @@
                 <div class="grid-item col-lg-4 col-md-6 col-12">
                     <div class="single_latest_post mb--30">
                         <div class="ht__blog__thumb">
-                            <a href="blog-details.html">
-                                <img src="images/blog/latest_post/9.jpg" alt="blog images">
+                            <a href="{{route('singleBlog')}}">
+                                <img src="{{asset('assets/frontend')}}/images/blog/latest_post/9.jpg" alt="blog images">
                             </a>
                         </div>
 
                         <div class="htc__blog__content">
                             <div class="blog__post_title">
-                                <h2><a href="blog-details.html">Believe it or not its just me Come and listen</a></h2>
+                                <h2><a href="{{route('singleBlog')}}">Believe it or not its just me Come and listen</a></h2>
                                 <p>There are many variations of passages of Lorem Ipsum available.</p>
                             </div>
                             <div class="blog_post__meta">
                                 <div class="post_author_img">
-                                    <a href="#"><img src="images/blog/latest_post/author_img_3.png" alt=""></a>
+                                    <a href="#"><img src="{{asset('assets/frontend')}}/images/blog/latest_post/author_img_3.png" alt=""></a>
                                 </div>
                                 <div class="post_content">
                                     <div class="author_tile">
@@ -268,19 +268,19 @@
                 <div class="grid-item col-lg-4 col-md-6 col-12">
                     <div class="single_latest_post mb--30">
                         <div class="ht__blog__thumb">
-                            <a href="blog-details.html">
-                                <img src="images/blog/latest_post/10.jpg" alt="blog images">
+                            <a href="{{route('singleBlog')}}">
+                                <img src="{{asset('assets/frontend')}}/images/blog/latest_post/10.jpg" alt="blog images">
                             </a>
                         </div>
 
                         <div class="htc__blog__content">
                             <div class="blog__post_title">
-                                <h2><a href="blog-details.html">Patient Forum School Patient Experience</a></h2>
+                                <h2><a href="{{route('singleBlog')}}">Patient Forum School Patient Experience</a></h2>
                                 <p>There are many variations of passages of Lorem Ipsum available.</p>
                             </div>
                             <div class="blog_post__meta">
                                 <div class="post_author_img">
-                                    <a href="#"><img src="images/blog/latest_post/author_img_3.png" alt=""></a>
+                                    <a href="#"><img src="{{asset('assets/frontend')}}/images/blog/latest_post/author_img_3.png" alt=""></a>
                                 </div>
                                 <div class="post_content">
                                     <div class="author_tile">
@@ -300,19 +300,19 @@
                 <div class="grid-item col-lg-4 col-md-6 col-12">
                     <div class="single_latest_post mb--30">
                         <div class="ht__blog__thumb">
-                            <a href="blog-details.html">
-                                <img src="images/blog/latest_post/11.jpg" alt="blog images">
+                            <a href="{{route('singleBlog')}}">
+                                <img src="{{asset('assets/frontend')}}/images/blog/latest_post/11.jpg" alt="blog images">
                             </a>
                         </div>
 
                         <div class="htc__blog__content">
                             <div class="blog__post_title">
-                                <h2><a href="blog-details.html">Washington Medical Science of Institute</a></h2>
+                                <h2><a href="{{route('singleBlog')}}">Washington Medical Science of Institute</a></h2>
                                 <p>There are many variations of passages of Lorem Ipsum available.</p>
                             </div>
                             <div class="blog_post__meta">
                                 <div class="post_author_img">
-                                    <a href="#"><img src="images/blog/latest_post/author_img_3.png" alt=""></a>
+                                    <a href="#"><img src="{{asset('assets/frontend')}}/images/blog/latest_post/author_img_3.png" alt=""></a>
                                 </div>
                                 <div class="post_content">
                                     <div class="author_tile">

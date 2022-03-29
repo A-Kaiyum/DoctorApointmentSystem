@@ -72,6 +72,8 @@ class UserController extends Controller
         Session::flash('success','User Updated Successfully');
         return redirect()->back();
     }
+
+
     public function destroy(User $user){
         if($user){
             $user->delete();

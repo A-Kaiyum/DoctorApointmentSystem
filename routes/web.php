@@ -26,6 +26,7 @@ Route::get('service', [FrontendController::class, 'singleService'])->name('singl
 Route::get('contact-us', [FrontendController::class, 'contact'])->name('contact');
 Route::get('dr-details', [FrontendController::class, 'drProfile'])->name('drProfile');
 Route::get('hospital', [FrontendController::class, 'hospital'])->name('hospital');
+Route::post('appointment', [FrontendController::class, 'makeAppointment'])->name('appointment');
 
 
 Route::get('/', function () {

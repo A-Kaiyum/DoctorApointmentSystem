@@ -142,7 +142,7 @@
                                         </div>
                                         <p>Dr Linda Freemanis one of the best Nurologiest in Bangladesh, In the world, In the Galaxy.There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.</p>
                                         <div class="contact_btn">
-                                            <a href="{{asset('assets/frontend')}}/doctor-details.html">Contact Me</a>
+                                            <a href="{{route('drProfile')}}">Contact Me</a>
                                         </div>
                                     </div>
                                 </div>

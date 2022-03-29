@@ -82,11 +82,11 @@
 <!-- doccure/login.html  30 Nov 2019 04:12:20 GMT -->
 <head>
     <meta charset="utf-8">
-    <title>Login</title>
+    <title>Registration</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
 
     <!-- Favicons -->
-    <link href="{{asset('assets/additional')}}/assets/img/favicon.png" rel="icon">
+    <link href="{{asset('assets/frontend')}}/images/logo/logo.png" rel="icon">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="{{asset('assets/additional')}}/assets/css/bootstrap.min.css">

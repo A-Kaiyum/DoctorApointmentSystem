@@ -57,9 +57,9 @@
                         <h2>Contact</h2>
                     </div>
                     <div class="single_footer_desc">
-                        <p>125, Las Vegus, Main City, Street lane, USA</p>
+                        <p>Dhaka, Bangladesh</p>
                         <p>+12345 365 789 <br> +01235 789 654 </p>
-                        <p>info@example.com<br> www.example.com </p>
+                        <p>info@example.com<br> www.demo.com </p>
                     </div>
                 </div>
             </div>

@@ -1,5 +1,5 @@
 @extends('frontend.layouts.master')
-@section('title','Medigy')
+@section('title','Hello Doc')
 @section('main-content')
     <div class="doctor_search_banner_content">
         <div class="container">
@@ -115,7 +115,7 @@
                 <div class="col-xl-4 col-lg-4 col-md-6 col-12">
                     <div class="single_special_doctor text-center mb--30">
                         <div class="doctor_image_2">
-                            <img src="images/doctor/2/2.png" alt="">
+                            <img src="{{asset('assets/frontend')}}/images/doctor/2/2.png" alt="">
                         </div>
                         <div class="doctor_brief_desc">
                             <div class="doctor_top_desc">
@@ -132,7 +132,7 @@
                                     <h4>Sun - Tues @ 1.00pm to 4.00pm</h4>
                                 </div>
                                 <div class="doctor_view_profile">
-                                    <a href="doctor-details.html">View Profile</a>
+                                    <a href="{{route('drProfile')}}">View Profile</a>
                                 </div>
                             </div>
                         </div>
@@ -141,7 +141,7 @@
                 <div class="col-xl-4 col-lg-4 col-md-6 col-12">
                     <div class="single_special_doctor text-center mb--30">
                         <div class="doctor_image_2">
-                            <img src="images/doctor/2/3.png" alt="">
+                            <img src="{{asset('assets/frontend')}}/images/doctor/2/3.png" alt="">
                         </div>
                         <div class="doctor_brief_desc">
                             <div class="doctor_top_desc">
@@ -158,7 +158,7 @@
                                     <h4>Mon - Thrus @ 6.00pm to 9.00pm</h4>
                                 </div>
                                 <div class="doctor_view_profile">
-                                    <a href="doctor-details.html">View Profile</a>
+                                    <a href="{{route('drProfile')}}">View Profile</a>
                                 </div>
                             </div>
                         </div>
@@ -167,7 +167,7 @@
                 <div class="col-xl-4 col-lg-4 col-md-6 col-12">
                     <div class="single_special_doctor text-center">
                         <div class="doctor_image_2">
-                            <img src="images/doctor/2/4.png" alt="">
+                            <img src="{{asset('assets/frontend')}}/images/doctor/2/4.png" alt="">
                         </div>
                         <div class="doctor_brief_desc">
                             <div class="doctor_top_desc">
@@ -184,7 +184,7 @@
                                     <h4>Mon - Sat @ 9.00pm to 11.00pm</h4>
                                 </div>
                                 <div class="doctor_view_profile">
-                                    <a href="doctor-details.html">View Profile</a>
+                                    <a href="{{route('drProfile')}}">View Profile</a>
                                 </div>
                             </div>
                         </div>
@@ -193,7 +193,7 @@
                 <div class="col-xl-4 col-lg-4 col-md-6 col-12">
                     <div class="single_special_doctor text-center">
                         <div class="doctor_image_2">
-                            <img src="images/doctor/2/5.png" alt="">
+                            <img src="{{asset('assets/frontend')}}/images/doctor/2/5.png" alt="">
                         </div>
                         <div class="doctor_brief_desc">
                             <div class="doctor_top_desc">
@@ -210,7 +210,7 @@
                                     <h4>sun - fri @ 10.00am to 4.00pm</h4>
                                 </div>
                                 <div class="doctor_view_profile">
-                                    <a href="doctor-details.html">View Profile</a>
+                                    <a href="{{route('drProfile')}}">View Profile</a>
                                 </div>
                             </div>
                         </div>
@@ -219,7 +219,7 @@
                 <div class="col-xl-4 col-lg-4 col-md-6 col-12">
                     <div class="single_special_doctor text-center">
                         <div class="doctor_image_2">
-                            <img src="images/doctor/2/6.png" alt="">
+                            <img src="{{asset('assets/frontend')}}/images/doctor/2/6.png" alt="">
                         </div>
                         <div class="doctor_brief_desc">
                             <div class="doctor_top_desc">
@@ -236,7 +236,7 @@
                                     <h4>Mon - Sat @ 9.00pm to 12.00am</h4>
                                 </div>
                                 <div class="doctor_view_profile">
-                                    <a href="doctor-details.html">View Profile</a>
+                                    <a href="{{route('drProfile')}}">View Profile</a>
                                 </div>
                             </div>
                         </div>
@@ -276,25 +276,27 @@
                     </div>
                     <div class="htc__appoinment__wrap">
                         <div class="htc__appoinment__form">
-                            <form action="#">
+                            <form action="{{route('appointment')}}" method="post" >
+                                @include('frontend.layouts.formSession')
+                            @csrf
                                 <div class="htc__app__box__inner">
                                     <div class="htc__app__box">
                                         <div class="input_inner">
-                                            <input type="text" placeholder="Type Your Full Name">
+                                            <input type="text" name="fullName" value="{{old('fullName')}}" placeholder="Type Your Full Name">
                                         </div>
                                     </div>
                                 </div>
                                 <div class="htc__app__box__inner">
                                     <div class="htc__app__box">
-                                        <input type="email" placeholder="Type Your E-mail">
+                                        <input type="email" name="email" value="{{old('email')}}" placeholder="Type Your E-mail">
                                     </div>
                                 </div>
                                 <div class="htc__app__box__inner">
                                     <div class="htc__app__box">
-                                        <input type="text" placeholder="Consulting Subject">
+                                        <input type="text" name="subject" value="{{old('subject')}}" placeholder="Consulting Subject">
                                     </div>
                                     <div class="htc__app__box psy__calendar">
-                                        <input class="date__dropdown" placeholder="Appoinment Date" type="text" id="datepicker">
+                                        <input class="date__dropdown" placeholder="Appoinment Date" name="appointDate" type="text" id="datepicker">
                                     </div>
                                 </div>
                                 <div class="htc__app__box__inner">
@@ -313,7 +315,7 @@
                                     </div>
                                     <div class="htc__app__box doctor_select">
                                         <div class="doctor_select_inner">
-                                            <select>
+                                            <select name="doctor_id">
                                                 <option value="1" selected>Select Doctor</option>
                                                 <option value="2" >Dr. Christine Roberts</option>
                                                 <option value="3" >Dr. Jacob Torres</option>
@@ -325,7 +327,7 @@
                                 </div>
                                 <div class="appoinment_message">
                                     <div class="htc__app__box message">
-                                        <textarea name="Message" placeholder="Type Additional Message"></textarea>
+                                        <textarea name="message" value="{{old('message')}}" placeholder="Type Additional Message"></textarea>
                                     </div>
                                     <div class="ht__appoin__btn">
                                         <button type="submit">Send Request</button>
@@ -364,12 +366,12 @@
 
                         <div class="htc__blog__content">
                             <div class="blog__post_title">
-                                <h2><a href="blog-details.html">Best Depression affects children’s mental development.</a></h2>
+                                <h2><a href="{{asset('singleBlog')}}">Best Depression affects children’s mental development.</a></h2>
                                 <p>There are many variations of passages of Lorem Ipsum available.</p>
                             </div>
                             <div class="blog_post__meta">
                                 <div class="post_author_img">
-                                    <a href="#"><img src="images/blog/latest_post/author_img_1.png" alt=""></a>
+                                    <a href="#"><img src="{{asset('assets/frontend')}}/images/blog/latest_post/author_img_1.png" alt=""></a>
                                 </div>
                                 <div class="post_content">
                                     <div class="author_tile">
@@ -388,19 +390,19 @@
                     <div class="single_latest_post flex left_grid mt--80">
 
                         <div class="ht__blog__thumb">
-                            <a href="blog-details.html">
-                                <img src="images/blog/latest_post/img-2.png" alt="blog images">
+                            <a href="{{asset('singleBlog')}}">
+                                <img src="{{asset('assets/frontend')}}/images/blog/latest_post/img-2.png" alt="blog images">
                             </a>
                         </div>
 
                         <div class="htc__blog__content">
                             <div class="blog__post_title">
-                                <h2><a href="blog-details.html">Best Depression affects children’s mental development.</a></h2>
+                                <h2><a href="{{asset('singleBlog')}}">Best Depression affects children’s mental development.</a></h2>
                                 <p>There are many variations of passages of Lorem Ipsum available.</p>
                             </div>
                             <div class="blog_post__meta">
                                 <div class="post_author_img">
-                                    <a href="#"><img src="images/blog/latest_post/author_img_2.png" alt=""></a>
+                                    <a href="#"><img src="{{asset('assets/frontend')}}/images/blog/latest_post/author_img_2.png" alt=""></a>
                                 </div>
                                 <div class="post_content">
                                     <div class="author_tile">
@@ -420,19 +422,19 @@
                 <div class="col-lg-4 col-xl-5 col-md-6 col-12">
                     <div class="single_latest_post right_grid">
                         <div class="ht__blog__thumb">
-                            <a href="blog-details.html">
-                                <img src="images/blog/latest_post/img-3.png" alt="blog images">
+                            <a href="{{asset('singleBlog')}}">
+                                <img src="{{asset('assets/frontend')}}/images/blog/latest_post/img-3.png" alt="blog images">
                             </a>
                         </div>
 
                         <div class="htc__blog__content">
                             <div class="blog__post_title">
-                                <h2><a href="blog-details.html">Anxiety disorder affects human life very badly</a></h2>
+                                <h2><a href="{{asset('singleBlog')}}">Anxiety disorder affects human life very badly</a></h2>
                                 <p>There are many variations of passages of Lorem Ipsum available.</p>
                             </div>
                             <div class="blog_post__meta">
                                 <div class="post_author_img">
-                                    <a href="#"><img src="images/blog/latest_post/author_img_3.png" alt=""></a>
+                                    <a href="#"><img src="{{asset('assets/frontend')}}/images/blog/latest_post/author_img_3.png" alt=""></a>
                                 </div>
                                 <div class="post_content">
                                     <div class="author_tile">

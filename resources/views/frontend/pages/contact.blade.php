@@ -50,7 +50,7 @@
                             <i class="zmdi zmdi-pin"></i>
                         </div>
                         <div class="address__details">
-                            <p>125 LasVegas, Main city Street lane, USA</p>
+                            <p>Dhaka, Bangladesh</p>
                         </div>
                     </div>
                 </div>

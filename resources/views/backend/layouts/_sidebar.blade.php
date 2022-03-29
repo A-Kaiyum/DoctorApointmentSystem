@@ -94,7 +94,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="{{route('admin.tag.index')}}" class="nav-link">
+                        <a href="{{route('admin.appointment.all')}}" class="nav-link">
                             <i class="fas fa-arrows-alt nav-icon"></i>
                             <p>All Appointment</p>
                         </a>
@@ -103,13 +103,13 @@
                 </ul>
             </li>
             <li class="nav-item">
-                <a href="{{route('admin.user.index')}}" class="nav-link">
+                <a href="{{route('admin.patient.index')}}" class="nav-link">
                     <i class="fas fa-user nav-icon"></i>
                     <p>Patient List</p>
                 </a>
             </li>
             <li class="nav-item">
-                <a href="{{route('admin.user.index')}}" class="nav-link">
+                <a href="{{route('admin.doctor.index')}}" class="nav-link">
                     <i class="fas fa-user nav-icon"></i>
                     <p>Doctor List</p>
                 </a>
