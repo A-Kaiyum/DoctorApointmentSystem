@@ -50,6 +50,12 @@
                 </a>
             </li>
             <li class="nav-item">
+                <a href="{{route('patient.appointment.all')}}" class="nav-link">
+                    <i class="fas fa-user nav-icon"></i>
+                    <p>My Appointment</p>
+                </a>
+            </li>
+            <li class="nav-item">
                 <a href="{{route('admin.user.index')}}" class="nav-link">
                     <i class="fas fa-user nav-icon"></i>
                     <p>Inbox</p>

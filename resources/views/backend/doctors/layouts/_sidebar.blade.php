@@ -88,7 +88,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="{{route('doctor.category.index')}}" class="nav-link">
+                        <a href="{{route('doctor.appointment.all')}}" class="nav-link">
                             <i class="fas fa-indent nav-icon"></i>
                             <p>All Appointment</p>
                         </a>

@@ -1,6 +1,7 @@
 <?php
 
 
+use App\Http\Controllers\Backend\Doctors\AppointmentController;
 use App\Http\Controllers\Backend\Doctors\CategoryController;
 use App\Http\Controllers\Backend\Doctors\ContactController;
 use App\Http\Controllers\Backend\Doctors\DashboardController;
@@ -19,5 +20,6 @@ Route::group(['prefix' => 'doctor/', 'as' => 'doctor.', 'middleware' => ['auth',
     Route::resource('post',PostController::class);
     Route::resource('contact',ContactController::class);
     Route::resource('user',UserController::class);
+    Route::get('appointment',[AppointmentController::class,'index'])->name('appointment.all');
 
 });
