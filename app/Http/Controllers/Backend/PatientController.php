@@ -34,13 +34,13 @@ class PatientController extends Controller
 
         $patient->save();
 
-        Session::flash('success','User Updated Successfully');
+        Session::flash('success','Patient Updated Successfully');
         return redirect()->back();
     }
     public function destroy(User $patient){
         if($patient){
             $patient->delete();
-            Session::flash('success','User Deleted Successfully');
+            Session::flash('success','Patient Deleted Successfully');
         }
         return redirect()->back();
     }

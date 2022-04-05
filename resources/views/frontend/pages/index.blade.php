@@ -318,7 +318,7 @@
                                             <select name="doctor_id">
                                                 <option value="1" selected>Select Doctor</option>
                                                 <option value="2" >Dr. Christine Roberts</option>
-                                                <option value="3" >Dr. Jacob Torres</option>
+                                                <option value="7" >Dr. AK</option>
                                                 <option value="4" >Dr. Diane Guerrero</option>
                                                 <option value="5" >Dr. Justin Howard</option>
                                             </select>
