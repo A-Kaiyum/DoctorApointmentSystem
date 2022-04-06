@@ -188,11 +188,14 @@
                                 </div>
 
                                 <div class="tab-pane" id="settings">
-                                    <form class="form-horizontal">
+                                    <form  class="form-horizontal"  action="{{route('admin.profileUpdate',$profile->id)}}" method="post" enctype="multipart/form-data" >
+                                        @csrf
+                                        @method('put')
+
                                         <div class="form-group row">
                                             <label for="inputName" class="col-sm-2 col-form-label">Name</label>
                                             <div class="col-sm-10">
-                                                <input type="email" class="form-control" id="inputName"
+                                                <input type="text" class="form-control" id="inputName"
                                                        placeholder="Name" name="name" value={{$profile->name}}>
                                             </div>
                                         </div>
