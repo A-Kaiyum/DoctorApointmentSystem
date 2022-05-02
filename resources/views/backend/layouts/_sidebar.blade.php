@@ -82,13 +82,13 @@
                 </a>
                 <ul class="nav nav-treeview">
                     <li class="nav-item">
-                        <a href="{{route('admin.post.index')}}" class="nav-link">
+                        <a href="{{route('admin.appointment.pending')}}" class="nav-link">
                             <i class="fas fa-pen-square nav-icon"></i>
                             <p>Pending Appointment</p>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="{{route('admin.category.index')}}" class="nav-link">
+                        <a href="{{route('admin.appointment.completed')}}" class="nav-link">
                             <i class="fas fa-indent nav-icon"></i>
                             <p>Completed Appointment</p>
                         </a>

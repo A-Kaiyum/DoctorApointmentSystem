@@ -26,6 +26,10 @@ Route::group(['prefix' => 'admin/', 'as' => 'admin.', 'middleware' => ['auth','a
     Route::resource('contact',ContactController::class);
     Route::resource('user',UserController::class);
     Route::get('appointment',[AppointmentController::class,'index'])->name('appointment.all');
+    Route::get('completed',[AppointmentController::class,'completed'])->name('appointment.completed');
+    Route::get('pending',[AppointmentController::class,'pending'])->name('appointment.pending');
+    Route::put('accept/{id}',[AppointmentController::class,'accept'])->name('appointment.accept');
+    Route::DELETE('reject/{id}',[AppointmentController::class,'reject'])->name('appointment.reject');
 
 
 });

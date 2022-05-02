@@ -22,9 +22,9 @@
                                 <th>Email</th>
                                 <th>Phone</th>
                                 <th>Subject</th>
-                                <th>AppointDate</th>
+                                <th>Appoint Date</th>
                                 <th>Status</th>
-                                <th style="width: 40px">Action</th>
+                                <th style="width: 150px">Action</th>
 
                             </tr>
                             </thead>
@@ -40,15 +40,17 @@
                                         <td>{{$appointment->subject}}</td>
                                         <td>{{$appointment->appointDate}}</td>
 
-                                        <td style="color: red">{{$appointment->status == 1?'Accepted':'Pending'}}</td>
+                                        <td>
+                                            @if($appointment->status == 1)
+                                                <span class="badge badge-pill badge-success">Accepted</span>
+                                            @else
+                                                <span class="badge badge-pill badge-danger">Pending</span>
+                                            @endif
+                                        </td>
                                         <td class="d-flex">
-                                            <a href="#" class="btn btn-sm btn-primary mr-1"> <i class="fas fa-edit"> Accept</i></a>
-                                            <form action="" method="POST">
-                                                @method('DELETE')
-                                                @csrf
-                                                <button type="submit" class="btn btn-sm btn-danger mr-1"><i class="fas fa-trash"></i>Reject</button>
-                                            </form>
-                                            <a href="" class="btn btn-sm btn-success mr-1"> <i class="fas fa-eye"></i></a>
+
+                                            <button  class="btn btn-sm btn-success mr-1"> <i class="fas fa-check" onclick="accept({{$appointment->id}})" > Accept</i></button>
+                                            <button type="submit" class="btn btn-sm btn-danger mr-1"><i class="fas fa-trash" onclick="reject({{$appointment->id}})"></i>Reject</button>
                                         </td>
                                     </tr>
                                     <?php $sl++; ?>
@@ -71,4 +73,47 @@
     </div>
 
 
+
+    <script>
+        $(document).ready(function(e) {
+
+            $.ajaxSetup({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                }
+            });
+
+        });
+        function accept(id) {
+
+            $.ajax({
+                type: "put",
+                dataType: "json",
+                url: "accept/" + id,
+                success: function(response) {
+
+                    location.reload();
+
+                }
+            })
+        }
+        function reject(id) {
+
+            $.ajax({
+                type: "DELETE",
+                dataType: "json",
+                url: "reject/" + id,
+                success: function(response) {
+
+                    location.reload();
+
+                }
+            })
+        }
+    </script>
 @endsection
+@push('scripts')
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+@endpush
