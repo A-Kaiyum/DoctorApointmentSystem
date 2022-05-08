@@ -7,17 +7,24 @@ use App\Http\Controllers\Controller;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
+use Psy\Util\Str;
 
 class DoctorController extends Controller
 {
     public function index(){
-        $doctorList = User::orderBy('id','DESC')->where('user_type','doctor')->get();
+        $doctorList = User::orderBy('id','DESC')->where('user_type','doctor')->where('status',1)->get();
         return  view('backend.pages.doctor',compact('doctorList'));
     }
 
     public function show(User $doctor)
     {
+
         return view('backend.pages.showDoctor',compact('doctor'));
+    }
+    public function registration()
+    {
+        $appointments = User::orderBy('id','DESC')->where('user_type','doctor')->where('status',0)->get();
+        return view('backend.pages.doctorRegistration',compact('appointments'));
     }
     public function edit(User $doctor){
         return view('backend.pages.editDoctor',compact('doctor'));
@@ -38,6 +45,26 @@ class DoctorController extends Controller
         Session::flash('success','User Updated Successfully');
         return redirect()->back();
     }
+
+    public function accept($id){
+
+        $appointments = User::where('id',$id)->update(['status'=>1,
+            'doctor_id' => random_int(10000,999999)]);
+        if($appointments){
+
+            Session::flash('success','Doctor Accepted');
+            return redirect()->back();
+        }
+
+    }
+    public function reject($id){
+        $res = User::destroy($id);
+        if($res){
+            Session::flash('success','Doctor Rejected');
+            return redirect()->back();
+        }
+    }
+
     public function destroy(User $doctor){
         if($doctor){
             $doctor->delete();

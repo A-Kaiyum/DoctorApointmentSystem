@@ -17,8 +17,12 @@ class DashboardController extends Controller
         $profile = User::where('id',auth()->user()->id)->first();
         return view('backend.pages.profile',compact('profile'));
     }
+    public  function sideBarImage(){
+        $profile = User::where('id',auth()->user()->id)->first();
+        return view('backend.layouts._sidebar',compact('profile'));
+    }
     public function profileUpdate(Request $request,$id){
-$user = User::findOrfail($id);
+        $user = User::findOrfail($id);
         $user ->name = $request->name;
         $user-> email = $request->email;
         $user-> phone = $request->phone;

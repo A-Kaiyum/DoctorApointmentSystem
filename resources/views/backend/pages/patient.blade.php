@@ -22,7 +22,6 @@
                                 <th>Name</th>
                                 <th>Email</th>
                                 <th>Phone</th>
-                                <th>Status</th>
                                 <th style="width: 40px">Action</th>
 
                             </tr>
@@ -41,7 +40,6 @@
                                         <td>{{$patient->name}}</td>
                                         <td>{{$patient->email}}</td>
                                         <td>{{$patient->phone}}</td>
-                                        <td style="color: red">{{$patient->status}} Pending</td>
                                         <td class="d-flex">
                                             <a href="{{route('admin.patient.edit',[$patient->id])}}" class="btn btn-sm btn-primary mr-1"> <i class="fas fa-edit"></i></a>
                                             <form action="{{route('admin.patient.destroy',[$patient->id])}}" method="POST">

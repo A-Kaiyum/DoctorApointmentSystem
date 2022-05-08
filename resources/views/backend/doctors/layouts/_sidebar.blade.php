@@ -42,6 +42,8 @@
                 </a>
 
             </li>
+
+            @if(auth()->user()->status ===1 )
             <li class="nav-item">
                 <a href="#" class="nav-link">
                     <i class="nav-icon fas fa-book"></i>
@@ -162,6 +164,7 @@
 
                 </ul>
             </li>
+            @endif
             <li class="nav-item">
                 <a href="#" class="nav-link">
                     <i class="fas fa-user nav-icon"></i>

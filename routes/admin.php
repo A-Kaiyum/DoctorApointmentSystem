@@ -16,6 +16,7 @@ Route::group(['prefix' => 'admin/', 'as' => 'admin.', 'middleware' => ['auth','a
 
     Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
     Route::get('profile',[DashboardController::class,'profile'])->name('profile');
+    Route::get('profile-image',[DashboardController::class,'sideBarImage'])->name('sideBarImage');
     Route::get('test',[DashboardController::class,'test'])->name('test');
     Route::put('profileUpdate/{id}',[DashboardController::class,'profileUpdate'])->name('profileUpdate');
     Route::resource('patient', PatientController::class);
@@ -25,11 +26,14 @@ Route::group(['prefix' => 'admin/', 'as' => 'admin.', 'middleware' => ['auth','a
     Route::resource('post',PostController::class);
     Route::resource('contact',ContactController::class);
     Route::resource('user',UserController::class);
+    Route::get('doctor-registration',[DoctorController::class,'registration'])->name('registration');
     Route::get('appointment',[AppointmentController::class,'index'])->name('appointment.all');
     Route::get('completed',[AppointmentController::class,'completed'])->name('appointment.completed');
     Route::get('pending',[AppointmentController::class,'pending'])->name('appointment.pending');
     Route::put('accept/{id}',[AppointmentController::class,'accept'])->name('appointment.accept');
     Route::DELETE('reject/{id}',[AppointmentController::class,'reject'])->name('appointment.reject');
+    Route::put('accepted/{id}',[DoctorController::class,'accept'])->name('doctor.accept');
+    Route::DELETE('rejected/{id}',[DoctorController::class,'reject'])->name('doctor.reject');
 
 
 });

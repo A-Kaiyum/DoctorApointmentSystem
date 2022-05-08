@@ -1,5 +1,5 @@
 @extends('backend.layouts.master')
-@section('title','Doctor List')
+@section('title','Registration List')
 @section('content')
 
     <div class="container-fluid">
@@ -18,38 +18,31 @@
                             <thead>
                             <tr>
                                 <th style="width: 10px">#Sl</th>
-                                <th>Image</th>
                                 <th>Name</th>
                                 <th>Email</th>
                                 <th>Phone</th>
-                                <th>Hello Doc ID</th>
-                                <th style="width: 40px">Action</th>
+                                <th>Status</th>
+                                <th style="width: 150px">Action</th>
 
                             </tr>
                             </thead>
                             <tbody>
-                            @if($doctorList->count()>0)
+                            @if($appointments->count()>0)
                                 <?php $sl = 1; ?>
-                                @foreach($doctorList as $doctor)
+                                @foreach($appointments as $appointment)
                                     <tr>
                                         <td>{{$sl}}</td>
+                                        <td>{{$appointment->fullName}}</td>
+                                        <td>{{$appointment->email}}</td>
+                                        <td>{{$appointment->phone}}</td>
                                         <td>
-                                            <div style="width:50px; height:50px;overflow: hidden">
-                                                <img src="{{asset($doctor->image)}}" class="img-fluid" alt="">
-                                            </div>
+                                                <span class="badge badge-pill badge-danger">Pending</span>
                                         </td>
-                                        <td>{{$doctor->name}}</td>
-                                        <td>{{$doctor->email}}</td>
-                                        <td>{{$doctor->phone}}</td>
-                                        <td>{{$doctor->doctor_id}}</td>
                                         <td class="d-flex">
-                                            <a href="{{route('admin.doctor.edit',[$doctor->id])}}" class="btn btn-sm btn-primary mr-1"> <i class="fas fa-edit"></i></a>
-                                            <form action="{{route('admin.doctor.destroy',[$doctor->id])}}" method="POST">
-                                                @method('DELETE')
-                                                @csrf
-                                                <button type="submit" class="btn btn-sm btn-danger mr-1"><i class="fas fa-trash"></i></button>
-                                            </form>
-                                            <a href="{{route('admin.doctor.show',[$doctor->id])}}" class="btn btn-sm btn-success mr-1"> <i class="fas fa-eye"></i></a>
+
+{{--                                            <button  class="btn btn-sm btn-success mr-1"> <i class="fas fa-check" onclick="accept({{$appointment->id}})" > Accept</i></button>--}}
+{{--                                            <button type="submit" class="btn btn-sm btn-danger mr-1"><i class="fas fa-trash" onclick="reject({{$appointment->id}})"></i>Reject</button>--}}
+                                                <a href="{{route('admin.doctor.show',[$appointment->id])}}" class="btn btn-sm btn-primary mr-1"> <i class="fas fa-eye">View</i></a>
                                         </td>
                                     </tr>
                                     <?php $sl++; ?>
@@ -57,7 +50,7 @@
                             @else
                                 <tr>
                                     <td colspan="6">
-                                        <h5 class="text-center">No doctor Found</h5>
+                                        <h5 class="text-center">No appointment Found</h5>
                                     </td>
                                 </tr>
                             @endif
@@ -71,5 +64,6 @@
         </div>
     </div>
 
-
 @endsection
+
+
