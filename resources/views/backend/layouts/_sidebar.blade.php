@@ -134,21 +134,21 @@
                     <li class="nav-item">
                         <a href="{{route('admin.contact.index')}}" class="nav-link">
                             <i class="fas fa-address-book nav-icon"></i>
-                            <p>Contact</p>
+                            <p>Message</p>
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a href="" class="nav-link">
-                            <i class="fas fa-shuttle-van nav-icon"></i>
-                            <p>Patient</p>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="" class="nav-link">
-                            <i class="fas fa-user-md nav-icon"></i>
-                            <p>Doctor</p>
-                        </a>
-                    </li>
+{{--                    <li class="nav-item">--}}
+{{--                        <a href="" class="nav-link">--}}
+{{--                            <i class="fas fa-shuttle-van nav-icon"></i>--}}
+{{--                            <p>Patient</p>--}}
+{{--                        </a>--}}
+{{--                    </li>--}}
+{{--                    <li class="nav-item">--}}
+{{--                        <a href="" class="nav-link">--}}
+{{--                            <i class="fas fa-user-md nav-icon"></i>--}}
+{{--                            <p>Doctor</p>--}}
+{{--                        </a>--}}
+{{--                    </li>--}}
 
                 </ul>
             </li>
@@ -162,13 +162,13 @@
                 </a>
                 <ul class="nav nav-treeview">
                     <li class="nav-item">
-                        <a href="" class="nav-link">
+                        <a href="{{route('admin.findBlood.index')}}" class="nav-link">
                             <i class="fas fa-envelope nav-icon"></i>
                             <p>Find Blood</p>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="" class="nav-link">
+                        <a href="{{route('admin.findDoner.index')}}" class="nav-link">
                             <i class="fas fa-envelope nav-icon"></i>
                             <p>Blood Doner</p>
                         </a>

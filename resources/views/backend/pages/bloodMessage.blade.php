@@ -42,12 +42,12 @@
                                         <td>{!! \Illuminate\Support\Str::limit($findBlood->message,20) !!}</td>
                                         <td class="d-flex">
 
-                                            <form action="{{route('findBlood.destroy',[$findBlood->id])}}" method="post">
+                                            <form action="{{route('admin.findBlood.destroy',[$findBlood->id])}}" method="post">
                                                 @method('DELETE')
                                                 @csrf
                                                 <button type="submit" class="btn btn-sm btn-danger mr-1"><i class="fas fa-trash"></i></button>
                                             </form>
-                                            <a href="{{route('findBlood.show',[$findBlood->id])}}" class="btn btn-sm btn-success mr-1"> <i class="fas fa-eye"></i></a>
+                                            <a href="{{route('admin.findBlood.show',[$findBlood->id])}}" class="btn btn-sm btn-success mr-1"> <i class="fas fa-eye"></i></a>
                                         </td>
                                     </tr>
                                     <?php $sl++; ?>

@@ -8,7 +8,7 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form id="contact-form" action="{{route('contact.create')}}" method="post">
+                <form id="contact-form" action="{{route('findBlood')}}" method="post">
                     @csrf
                     <div class="single-contact-form name">
                         <div class="contact-box name_email">

@@ -10,6 +10,8 @@ use App\Http\Controllers\Backend\UserController;
 use App\Http\Controllers\Backend\PatientController;
 use App\Http\Controllers\Backend\DoctorController;
 use App\Http\Controllers\Backend\AppointmentController;
+use App\Http\Controllers\Backend\FindBloodController;
+use App\Http\Controllers\Backend\FindDonerController;
 use Illuminate\Support\Facades\Route;
 
 Route::group(['prefix' => 'admin/', 'as' => 'admin.', 'middleware' => ['auth','admin']], function () {
@@ -26,6 +28,8 @@ Route::group(['prefix' => 'admin/', 'as' => 'admin.', 'middleware' => ['auth','a
     Route::resource('post',PostController::class);
     Route::resource('contact',ContactController::class);
     Route::resource('user',UserController::class);
+    Route::resource('findBlood',FindBloodController::class);
+    Route::resource('findDoner',FindDonerController::class);
     Route::get('doctor-registration',[DoctorController::class,'registration'])->name('registration');
     Route::get('appointment',[AppointmentController::class,'index'])->name('appointment.all');
     Route::get('completed',[AppointmentController::class,'completed'])->name('appointment.completed');

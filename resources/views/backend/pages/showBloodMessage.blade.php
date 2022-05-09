@@ -6,8 +6,8 @@
             <div class="card-header">
 
                 <div class="d-flex justify-content-between align-items-center">
-                    <h3 class="card-title">Create post</h3>
-                    <a href="{{route('findBlood.index')}}" class="btn btn-primary"> Go Back</a>
+                    <h3 class="card-title">Find Blood </h3>
+                    <a href="{{route('admin.findBlood.index')}}" class="btn btn-primary"> Go Back</a>
                 </div>
             </div>
             <!-- /.card-header -->
@@ -19,10 +19,6 @@
                         <td>{{$findBlood->name}}</td>
                     </tr>
                     <tr>
-                        <th style="width:200px">Email</th>
-                        <td>{{$findBlood->email}}</td>
-                    </tr>
-                    <tr>
                         <th style="width:200px">Phone</th>
                         <td>{{$findBlood->phone}}</td>
                     </tr>
@@ -32,7 +28,7 @@
                     </tr>
                     <tr>
                         <th style="width:200px">Blood Group</th>
-                        <td>{{$findBlood->bloodgroup}}</td>
+                        <td>{{$findBlood->bg_group}}</td>
                     </tr>
                     <tr>
                         <th style="width:200px">Message</th>

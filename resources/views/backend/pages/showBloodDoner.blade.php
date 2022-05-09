@@ -7,7 +7,7 @@
 
                 <div class="d-flex justify-content-between align-items-center">
                     <h3 class="card-title">Create post</h3>
-                    <a href="{{route('findDoner.index')}}" class="btn btn-primary"> Go Back</a>
+                    <a href="{{route('admin.findDoner.index')}}" class="btn btn-primary"> Go Back</a>
                 </div>
             </div>
             <!-- /.card-header -->
@@ -19,10 +19,6 @@
                         <td>{{$findDoner->name}}</td>
                     </tr>
                     <tr>
-                        <th style="width:200px">Email</th>
-                        <td>{{$findDoner->email}}</td>
-                    </tr>
-                    <tr>
                         <th style="width:200px">Phone</th>
                         <td>{{$findDoner->phone}}</td>
                     </tr>
@@ -31,12 +27,8 @@
                         <td>{{$findDoner->address}}</td>
                     </tr>
                     <tr>
-                        <th style="width:200px">Last Donation</th>
-                        <td>{{$findDoner->last_donate}}</td>
-                    </tr>
-                    <tr>
                         <th style="width:200px">Blood Group</th>
-                        <td>{{$findDoner->bloodgroup}}</td>
+                        <td>{{$findDoner->bg_group}}</td>
                     </tr>
                     <tr>
                         <th style="width:200px">Message</th>

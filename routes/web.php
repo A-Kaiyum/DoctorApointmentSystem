@@ -28,6 +28,8 @@ Route::post('contact-create', [FrontendController::class, 'createContact'])->nam
 Route::get('dr-details', [FrontendController::class, 'drProfile'])->name('drProfile');
 Route::get('hospital', [FrontendController::class, 'hospital'])->name('hospital');
 Route::post('appointment', [FrontendController::class, 'makeAppointment'])->name('appointment');
+Route::post('findBlood', [FrontendController::class, 'findBlood'])->name('findBlood');
+Route::post('donateBlood', [FrontendController::class, 'donateBlood'])->name('donateBlood');
 
 
 Route::get('/', function () {

@@ -49,12 +49,12 @@
                             <td>{!! \Illuminate\Support\Str::limit($findDoner->message,20) !!}</td>
                             <td class="d-flex">
 
-                                <form action="{{route('findDoner.destroy',[$findDoner->id])}}" method="post">
+                                <form action="{{route('admin.findDoner.destroy',[$findDoner->id])}}" method="post">
                                     @method('DELETE')
                                     @csrf
                                     <button type="submit" class="btn btn-sm btn-danger mr-1"><i class="fas fa-trash"></i></button>
                                 </form>
-                                <a href="{{route('findDoner.show',[$findDoner->id])}}" class="btn btn-sm btn-success mr-1"> <i class="fas fa-eye"></i></a>
+                                <a href="{{route('admin.findDoner.show',[$findDoner->id])}}" class="btn btn-sm btn-success mr-1"> <i class="fas fa-eye"></i></a>
                             </td>
                         </tr>
                         <?php $sl++; ?>

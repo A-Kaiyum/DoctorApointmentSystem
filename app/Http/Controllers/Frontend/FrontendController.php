@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Frontend;
 use App\Http\Controllers\Controller;
 use App\Models\Appointment;
 use App\Models\Contact;
+use App\Models\DonateBlood;
+use App\Models\FindBlood;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 
@@ -51,6 +53,34 @@ class FrontendController extends Controller
         //dd($request->all());
 
         $appointment = Contact::create($request->all());
+
+        if($appointment){
+
+            Session::flash('message','Message Send Success. Please Wait !');
+            return redirect()->back();
+        }
+
+
+    }
+    public function findBlood(Request $request){
+
+        //dd($request->all());
+
+        $appointment = FindBlood::create($request->all());
+
+        if($appointment){
+
+            Session::flash('message','Message Send Success. Please Wait !');
+            return redirect()->back();
+        }
+
+
+    }
+    public function donateBlood(Request $request){
+
+        //dd($request->all());
+
+        $appointment = DonateBlood::create($request->all());
 
         if($appointment){
 
