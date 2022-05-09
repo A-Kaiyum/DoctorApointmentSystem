@@ -120,7 +120,7 @@
                 </a>
                 <ul class="nav nav-treeview">
                     <li class="nav-item">
-                        <a href="" class="nav-link">
+                        <a href="#" class="nav-link">
                             <i class="fas fa-address-book nav-icon"></i>
                             <p>Contact</p>
                         </a>

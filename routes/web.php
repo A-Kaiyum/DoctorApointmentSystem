@@ -24,6 +24,7 @@ Route::get('blog-details', [FrontendController::class, 'singleBlog'])->name('sin
 Route::get('our-services', [FrontendController::class, 'service'])->name('service');
 Route::get('service', [FrontendController::class, 'singleService'])->name('singleService');
 Route::get('contact-us', [FrontendController::class, 'contact'])->name('contact');
+Route::post('contact-create', [FrontendController::class, 'createContact'])->name('contact.create');
 Route::get('dr-details', [FrontendController::class, 'drProfile'])->name('drProfile');
 Route::get('hospital', [FrontendController::class, 'hospital'])->name('hospital');
 Route::post('appointment', [FrontendController::class, 'makeAppointment'])->name('appointment');

@@ -85,11 +85,7 @@
             </div>
         </div>
         <!-- Start Google Map -->
-        <div class="htc__google__map">
-            <div class="map-contacts">
-                <div id="googleMap"></div>
-            </div>
-        </div>
+        <div class="mapouter" style="margin-left: 200px"><div class="gmap_canvas"><iframe width="1080" height="600" id="gmap_canvas" src="https://maps.google.com/maps?q=Dhaka&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://fmovies-online.net"></a><br><style>.mapouter{position:relative;text-align:right;height:600px;width:1080px;}</style><a href="https://www.embedgooglemap.net">google maps embed html</a><style>.gmap_canvas {overflow:hidden;background:none!important;height:600px;width:1080px;}</style></div></div>
         <!-- End Google Map -->
         <!-- Start Conatact Form -->
         <div class="psy__contact__form">
@@ -99,7 +95,9 @@
                         <div class="htc__contact__form__wrap">
                             <div class="contact-form-wrap">
                                 <h2 class="ct__title text--theme">Send us a message</h2>
-                                <form id="contact-form" action="https://template.hasthemes.com/curex/curex/mail.php" method="post">
+                                @include('frontend.layouts.formSession')
+                                <form id="contact-form" action="{{route('contact.create')}}" method="post">
+                                    @csrf
                                     <div class="single-contact-form name">
                                         <div class="contact-box name_email">
                                             <div class="contact-box">

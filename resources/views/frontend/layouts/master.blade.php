@@ -13,6 +13,10 @@
     <link rel="shortcut icon" type="image/x-icon" href="{{asset('assets/frontend')}}/images/favicon.ico">
     <link rel="apple-touch-icon" href="apple-touch-icon.html">
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
 
     <!-- All css files are included here. -->
     <link rel="stylesheet" href="{{asset('assets/frontend/css/bootstrap.min.css')}}">
@@ -85,6 +89,10 @@
             </div>
         </div>
     </section>
+
+@include('frontend.pages.findBlood')
+@include('frontend.pages.donnerRegistration')
+
     <!-- End Subscribe Area -->
     <!-- Start Footer Area -->
     <footer class="footer_area">

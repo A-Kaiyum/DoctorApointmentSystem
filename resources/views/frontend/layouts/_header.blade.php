@@ -18,6 +18,12 @@
                         </li>
                         <li class="drop"><a href="{{route('blog')}}">Blog</a>
                         </li>
+                        <li class="drop"><a href=""#>Blood Bank</a>
+                            <ul class="dropdown">
+                                <li><a href="#" data-toggle="modal" data-target="#exampleModal">Find Blood</a></li>
+                                <li><a href="#" data-toggle="modal" data-target="#donnerModal">Register Donner </a></li>
+                            </ul>
+                        </li>
                         <li class="drop"><a href="{{route('contact')}}">Contact</a></li>
                         <li class="drop"><a href="{{route('login')}}">Login</a></li>
                     </ul>
@@ -25,5 +31,6 @@
             </div>
         </div>
     </div>
+
 </div>
 
