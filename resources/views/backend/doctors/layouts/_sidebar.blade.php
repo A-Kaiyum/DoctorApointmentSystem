@@ -12,7 +12,7 @@
             <img src="{{asset('storage/images/user2-160x160.jpg')}}" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-            <a href="{{route('doctor.dashboard')}}" class="d-block">Doctor</a>
+            <a href="{{route('doctor.dashboard')}}" class="d-block">{{auth()->user()->name}}</a>
         </div>
     </div>
 
@@ -166,7 +166,7 @@
             </li>
             @endif
             <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="{{route('doctor.profile')}}" class="nav-link">
                     <i class="fas fa-user nav-icon"></i>
                     <p>My Profile</p>
                 </a>

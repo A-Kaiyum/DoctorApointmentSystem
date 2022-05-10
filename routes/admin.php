@@ -18,9 +18,8 @@ Route::group(['prefix' => 'admin/', 'as' => 'admin.', 'middleware' => ['auth','a
 
     Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
     Route::get('profile',[DashboardController::class,'profile'])->name('profile');
-    Route::get('profile-image',[DashboardController::class,'sideBarImage'])->name('sideBarImage');
-    Route::get('test',[DashboardController::class,'test'])->name('test');
     Route::put('profileUpdate/{id}',[DashboardController::class,'profileUpdate'])->name('profileUpdate');
+    Route::get('profile-image',[DashboardController::class,'sideBarImage'])->name('sideBarImage');
     Route::resource('patient', PatientController::class);
     Route::resource('doctor', DoctorController::class);
     Route::resource('category',CategoryController::class);
@@ -30,7 +29,9 @@ Route::group(['prefix' => 'admin/', 'as' => 'admin.', 'middleware' => ['auth','a
     Route::resource('user',UserController::class);
     Route::resource('findBlood',FindBloodController::class);
     Route::resource('findDoner',FindDonerController::class);
-    Route::get('doctor-registration',[DoctorController::class,'registration'])->name('registration');
+    Route::get('doctor-registration',[DoctorController::class,'doctorRegistration'])->name('doctor');
+    Route::get('hospital-registration',[DashboardController::class,'hospitalRegistration'])->name('hospital');
+    Route::get('patient-registration',[PatientController::class,'patientRegistration'])->name('patient');
     Route::get('appointment',[AppointmentController::class,'index'])->name('appointment.all');
     Route::get('completed',[AppointmentController::class,'completed'])->name('appointment.completed');
     Route::get('pending',[AppointmentController::class,'pending'])->name('appointment.pending');
@@ -38,6 +39,11 @@ Route::group(['prefix' => 'admin/', 'as' => 'admin.', 'middleware' => ['auth','a
     Route::DELETE('reject/{id}',[AppointmentController::class,'reject'])->name('appointment.reject');
     Route::put('accepted/{id}',[DoctorController::class,'accept'])->name('doctor.accept');
     Route::DELETE('rejected/{id}',[DoctorController::class,'reject'])->name('doctor.reject');
-
+    Route::put('patient-accepted/{id}',[PatientController::class,'accept'])->name('patient.accept');
+    Route::DELETE('patient-rejected/{id}',[PatientController::class,'reject'])->name('patient.reject');
+    Route::put('hospital-accepted/{id}',[DashboardController::class,'accept'])->name('hospital.accept');
+    Route::DELETE('hospital-rejected/{id}',[DashboardController::class,'reject'])->name('hospital.reject');
+    Route::get('hospital-show/{id}',[DashboardController::class,'hospitalShow'])->name('hospital.hospitalShow');
+//    Route::get('test',[DashboardController::class,'test'])->name('test');
 
 });

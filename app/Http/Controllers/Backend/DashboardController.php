@@ -28,6 +28,7 @@ class DashboardController extends Controller
         $user-> phone = $request->phone;
 
 
+
         if($request->hasFile('image')) {
             $image = $request->image;
             $image_new_name = time() . '.' . $image->getClientOriginalExtension();
@@ -40,7 +41,35 @@ class DashboardController extends Controller
         return redirect()->back();
     }
 
-    public function test(){
-        return "Okay";
+    public function hospitalRegistration()
+    {
+        $appointments = User::orderBy('id','DESC')->where('user_type','hospital')->where('status',0)->get();
+        return view('backend.pages.hospitalRegistration',compact('appointments'));
+    }
+
+    public function hospitalShow()
+    {
+        $hospital = User::orderBy('id','DESC')->where('user_type','hospital')->first();
+
+        return view('backend.pages.showhospital',compact('hospital'));
+    }
+
+    public function accept($id){
+
+        $appointments = User::where('id',$id)->update(['status'=>1,
+            'doctor_id' => random_int(10000,999999)]);
+        if($appointments){
+
+            Session::flash('success','Doctor Accepted');
+            return redirect()->back();
+        }
+
+    }
+    public function reject($id){
+        $res = User::destroy($id);
+        if($res){
+            Session::flash('success','Doctor Rejected');
+            return redirect()->back();
+        }
     }
 }

@@ -21,7 +21,7 @@ class DoctorController extends Controller
 
         return view('backend.pages.showDoctor',compact('doctor'));
     }
-    public function registration()
+    public function doctorRegistration()
     {
         $appointments = User::orderBy('id','DESC')->where('user_type','doctor')->where('status',0)->get();
         return view('backend.pages.doctorRegistration',compact('appointments'));

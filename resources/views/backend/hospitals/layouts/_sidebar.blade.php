@@ -42,98 +42,100 @@
                 </a>
 
             </li>
-            <li class="nav-item">
-                <a href="#" class="nav-link">
-                    <i class="nav-icon fas fa-book"></i>
-                    <p>
-                        Blog
-                        <i class="fas fa-angle-left right"></i>
-                    </p>
-                </a>
-                <ul class="nav nav-treeview">
-                    <li class="nav-item">
-                        <a href="{{route('hospital.post.index')}}" class="nav-link">
-                            <i class="fas fa-pen-square nav-icon"></i>
-                            <p>Post</p>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="{{route('hospital.category.index')}}" class="nav-link">
-                            <i class="fas fa-indent nav-icon"></i>
-                            <p>Category</p>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="{{route('hospital.tag.index')}}" class="nav-link">
-                            <i class="fas fa-arrows-alt nav-icon"></i>
-                            <p>Tag</p>
-                        </a>
-                    </li>
+           @if(auth()->user()->status === 1)
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fas fa-book"></i>
+                        <p>
+                            Blog
+                            <i class="fas fa-angle-left right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="{{route('hospital.post.index')}}" class="nav-link">
+                                <i class="fas fa-pen-square nav-icon"></i>
+                                <p>Post</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{route('hospital.category.index')}}" class="nav-link">
+                                <i class="fas fa-indent nav-icon"></i>
+                                <p>Category</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{route('hospital.tag.index')}}" class="nav-link">
+                                <i class="fas fa-arrows-alt nav-icon"></i>
+                                <p>Tag</p>
+                            </a>
+                        </li>
 
-                </ul>
-            </li>
-            <li class="nav-item">
-                <a href="{{route('hospital.user.index')}}" class="nav-link">
-                    <i class="fas fa-user nav-icon"></i>
-                    <p>Patient List</p>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a href="{{route('hospital.contact.index')}}" class="nav-link">
-                    <i class="fas fa-envelope nav-icon"></i>
-                    <p>
-                        Inbox
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="{{route('hospital.user.index')}}" class="nav-link">
+                        <i class="fas fa-user nav-icon"></i>
+                        <p>Patient List</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{route('hospital.contact.index')}}" class="nav-link">
+                        <i class="fas fa-envelope nav-icon"></i>
+                        <p>
+                            Inbox
 
-                    </p>
-                </a>
-                <ul class="nav nav-treeview">
-                    <li class="nav-item">
-                        <a href="" class="nav-link">
-                            <i class="fas fa-address-book nav-icon"></i>
-                            <p>Contact</p>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="" class="nav-link">
-                            <i class="fas fa-shuttle-van nav-icon"></i>
-                            <p>Patient</p>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="" class="nav-link">
-                            <i class="fas fa-user-md nav-icon"></i>
-                            <p>Doctor</p>
-                        </a>
-                    </li>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="" class="nav-link">
+                                <i class="fas fa-address-book nav-icon"></i>
+                                <p>Contact</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="" class="nav-link">
+                                <i class="fas fa-shuttle-van nav-icon"></i>
+                                <p>Patient</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="" class="nav-link">
+                                <i class="fas fa-user-md nav-icon"></i>
+                                <p>Doctor</p>
+                            </a>
+                        </li>
 
-                </ul>
-            </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="fas fa-burn nav-icon"></i>
+                        <p>
+                            Blood Bank
+
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="" class="nav-link">
+                                <i class="fas fa-envelope nav-icon"></i>
+                                <p>Find Blood</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="" class="nav-link">
+                                <i class="fas fa-envelope nav-icon"></i>
+                                <p>Blood Doner</p>
+                            </a>
+                        </li>
+
+                    </ul>
+                </li>
+               @endif
             <li class="nav-item">
-                <a href="#" class="nav-link">
-                    <i class="fas fa-burn nav-icon"></i>
-                    <p>
-                        Blood Bank
-
-                    </p>
-                </a>
-                <ul class="nav nav-treeview">
-                    <li class="nav-item">
-                        <a href="" class="nav-link">
-                            <i class="fas fa-envelope nav-icon"></i>
-                            <p>Find Blood</p>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="" class="nav-link">
-                            <i class="fas fa-envelope nav-icon"></i>
-                            <p>Blood Doner</p>
-                        </a>
-                    </li>
-
-                </ul>
-            </li>
-            <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="{{route('hospital.profile')}}" class="nav-link">
                     <i class="fas fa-user nav-icon"></i>
                     <p>My Profile</p>
                 </a>

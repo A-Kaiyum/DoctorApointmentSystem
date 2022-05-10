@@ -42,7 +42,7 @@
 
 {{--                                            <button  class="btn btn-sm btn-success mr-1"> <i class="fas fa-check" onclick="accept({{$appointment->id}})" > Accept</i></button>--}}
 {{--                                            <button type="submit" class="btn btn-sm btn-danger mr-1"><i class="fas fa-trash" onclick="reject({{$appointment->id}})"></i>Reject</button>--}}
-                                                <a href="{{route('admin.doctor.show',[$appointment->id])}}" class="btn btn-sm btn-primary mr-1"> <i class="fas fa-eye">View</i></a>
+                                                <a href="{{route('admin.patient.show',[$appointment->id])}}" class="btn btn-sm btn-primary mr-1"> <i class="fas fa-eye">View</i></a>
                                         </td>
                                     </tr>
                                     <?php $sl++; ?>

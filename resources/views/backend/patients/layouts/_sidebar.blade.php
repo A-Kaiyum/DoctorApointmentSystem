@@ -43,50 +43,52 @@
 
             </li>
 
-            <li class="nav-item">
-                <a href="{{route('patient.user.index')}}" class="nav-link">
-                    <i class="fas fa-user nav-icon"></i>
-                    <p>My Medical History</p>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a href="{{route('patient.appointment.all')}}" class="nav-link">
-                    <i class="fas fa-user nav-icon"></i>
-                    <p>My Appointment</p>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a href="{{route('admin.user.index')}}" class="nav-link">
-                    <i class="fas fa-user nav-icon"></i>
-                    <p>Inbox</p>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a href="#" class="nav-link">
-                    <i class="fas fa-burn nav-icon"></i>
-                    <p>
-                        Blood Bank
+            @if(auth()->user()->status === 1)
+                <li class="nav-item">
+                    <a href="{{route('patient.user.index')}}" class="nav-link">
+                        <i class="fas fa-user nav-icon"></i>
+                        <p>My Medical History</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{route('patient.appointment.all')}}" class="nav-link">
+                        <i class="fas fa-user nav-icon"></i>
+                        <p>My Appointment</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{route('admin.user.index')}}" class="nav-link">
+                        <i class="fas fa-user nav-icon"></i>
+                        <p>Inbox</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="fas fa-burn nav-icon"></i>
+                        <p>
+                            Blood Bank
 
-                    </p>
-                </a>
-                <ul class="nav nav-treeview">
-                    <li class="nav-item">
-                        <a href="" class="nav-link">
-                            <i class="fas fa-envelope nav-icon"></i>
-                            <p>Find Blood</p>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="" class="nav-link">
-                            <i class="fas fa-envelope nav-icon"></i>
-                            <p>Blood Doner</p>
-                        </a>
-                    </li>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="" class="nav-link">
+                                <i class="fas fa-envelope nav-icon"></i>
+                                <p>Find Blood</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="" class="nav-link">
+                                <i class="fas fa-envelope nav-icon"></i>
+                                <p>Blood Doner</p>
+                            </a>
+                        </li>
 
-                </ul>
-            </li>
+                    </ul>
+                </li>
+                @endif
             <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="{{route('patient.profile')}}" class="nav-link">
                     <i class="fas fa-user nav-icon"></i>
                     <p>My Profile</p>
                 </a>

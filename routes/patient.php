@@ -19,4 +19,7 @@ Route::group(['prefix' => 'patient/', 'as' => 'patient.', 'middleware' => ['auth
     Route::resource('user',UserController::class);
     Route::get('appointment',[AppointmentController::class,'index'])->name('appointment.all');
 
+    Route::get('profile',[DashboardController::class,'profile'])->name('profile');
+    Route::put('profileUpdate/{id}',[DashboardController::class,'profileUpdate'])->name('profileUpdate');
+
 });

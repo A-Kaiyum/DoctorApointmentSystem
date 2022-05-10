@@ -117,11 +117,23 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a href="{{route('admin.registration')}}" class="nav-link">
+                <a href="{{route('admin.doctor')}}" class="nav-link">
                     <i class="fas fa-user nav-icon"></i>
                     <p>Doctor Register</p>
                 </a>
             </li>
+                <li class="nav-item">
+                    <a href="{{route('admin.hospital')}}" class="nav-link">
+                        <i class="fas fa-user nav-icon"></i>
+                        <p>Hospital Register</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{route('admin.patient')}}" class="nav-link">
+                        <i class="fas fa-user nav-icon"></i>
+                        <p>Patient Register</p>
+                    </a>
+                </li>
             <li class="nav-item">
                 <a href="{{route('admin.contact.index')}}" class="nav-link">
                     <i class="fas fa-envelope nav-icon"></i>
