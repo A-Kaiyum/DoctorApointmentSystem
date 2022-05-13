@@ -21,7 +21,7 @@ class PostController extends Controller
     public function index()
     {
         $posts = Post::orderBy('created_at','DESC')->paginate(20);
-      return view('backend.pages.post',compact('posts'));
+      return view('backend.doctors.pages.post',compact('posts'));
 
     }
 
@@ -33,7 +33,7 @@ class PostController extends Controller
     public function create()
     {
         $categories = Category::all();
-        return view('backend.pages.createPost',compact('categories'));
+        return view('backend.doctors.pages.createPost',compact('categories'));
     }
 
     /**
@@ -82,7 +82,7 @@ class PostController extends Controller
      */
     public function show(Post $post)
     {
-        return view('backend.pages.showPost',compact('post'));
+        return view('backend.doctors.pages.showPost',compact('post'));
     }
 
     /**
@@ -94,7 +94,7 @@ class PostController extends Controller
     public function edit(Post $post)
     {
         $categories = Category::all();
-        return view('backend.pages.editPost',compact(['post','categories']));
+        return view('backend.doctors.pages.editPost',compact(['post','categories']));
     }
 
     /**

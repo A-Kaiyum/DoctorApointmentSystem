@@ -86,6 +86,7 @@
                 </div>
             </div>
             <div class="row">
+@foreach($doctors as $doctor)
                 <div class="col-xl-4 col-lg-4 col-md-6 col-12">
                     <div class="single_special_doctor text-center mb--30">
                         <div class="doctor_image_2">
@@ -112,136 +113,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-4 col-lg-4 col-md-6 col-12">
-                    <div class="single_special_doctor text-center mb--30">
-                        <div class="doctor_image_2">
-                            <img src="{{asset('assets/frontend')}}/images/doctor/2/2.png" alt="">
-                        </div>
-                        <div class="doctor_brief_desc">
-                            <div class="doctor_top_desc">
-                                <div class="doctor_name">
-                                    <h4>Dr. Roy Owens</h4>
-                                </div>
-                                <div class="doctor_designation">
-                                    <h5>Gynecologist</h5>
-                                </div>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting.</p>
-                            </div>
-                            <div class="doctor_bottom_desc">
-                                <div class="doctor_shecduled_time">
-                                    <h4>Sun - Tues @ 1.00pm to 4.00pm</h4>
-                                </div>
-                                <div class="doctor_view_profile">
-                                    <a href="{{route('drProfile')}}">View Profile</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-4 col-md-6 col-12">
-                    <div class="single_special_doctor text-center mb--30">
-                        <div class="doctor_image_2">
-                            <img src="{{asset('assets/frontend')}}/images/doctor/2/3.png" alt="">
-                        </div>
-                        <div class="doctor_brief_desc">
-                            <div class="doctor_top_desc">
-                                <div class="doctor_name">
-                                    <h4>Dr. Jacob Ross</h4>
-                                </div>
-                                <div class="doctor_designation">
-                                    <h5>Surgery specialist</h5>
-                                </div>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting.</p>
-                            </div>
-                            <div class="doctor_bottom_desc">
-                                <div class="doctor_shecduled_time">
-                                    <h4>Mon - Thrus @ 6.00pm to 9.00pm</h4>
-                                </div>
-                                <div class="doctor_view_profile">
-                                    <a href="{{route('drProfile')}}">View Profile</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-4 col-md-6 col-12">
-                    <div class="single_special_doctor text-center">
-                        <div class="doctor_image_2">
-                            <img src="{{asset('assets/frontend')}}/images/doctor/2/4.png" alt="">
-                        </div>
-                        <div class="doctor_brief_desc">
-                            <div class="doctor_top_desc">
-                                <div class="doctor_name">
-                                    <h4>Dr. Mark Williamson</h4>
-                                </div>
-                                <div class="doctor_designation">
-                                    <h5>Physiatrist</h5>
-                                </div>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting.</p>
-                            </div>
-                            <div class="doctor_bottom_desc">
-                                <div class="doctor_shecduled_time">
-                                    <h4>Mon - Sat @ 9.00pm to 11.00pm</h4>
-                                </div>
-                                <div class="doctor_view_profile">
-                                    <a href="{{route('drProfile')}}">View Profile</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-4 col-md-6 col-12">
-                    <div class="single_special_doctor text-center">
-                        <div class="doctor_image_2">
-                            <img src="{{asset('assets/frontend')}}/images/doctor/2/5.png" alt="">
-                        </div>
-                        <div class="doctor_brief_desc">
-                            <div class="doctor_top_desc">
-                                <div class="doctor_name">
-                                    <h4>Dr. Scott Rios</h4>
-                                </div>
-                                <div class="doctor_designation">
-                                    <h5>Radiologist</h5>
-                                </div>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting.</p>
-                            </div>
-                            <div class="doctor_bottom_desc">
-                                <div class="doctor_shecduled_time">
-                                    <h4>sun - fri @ 10.00am to 4.00pm</h4>
-                                </div>
-                                <div class="doctor_view_profile">
-                                    <a href="{{route('drProfile')}}">View Profile</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-4 col-md-6 col-12">
-                    <div class="single_special_doctor text-center">
-                        <div class="doctor_image_2">
-                            <img src="{{asset('assets/frontend')}}/images/doctor/2/6.png" alt="">
-                        </div>
-                        <div class="doctor_brief_desc">
-                            <div class="doctor_top_desc">
-                                <div class="doctor_name">
-                                    <h4>Dr. Andrea Fowler</h4>
-                                </div>
-                                <div class="doctor_designation">
-                                    <h5>Hepatologist</h5>
-                                </div>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting.</p>
-                            </div>
-                            <div class="doctor_bottom_desc">
-                                <div class="doctor_shecduled_time">
-                                    <h4>Mon - Sat @ 9.00pm to 12.00am</h4>
-                                </div>
-                                <div class="doctor_view_profile">
-                                    <a href="{{route('drProfile')}}">View Profile</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </div>
@@ -267,80 +139,84 @@
 
 
     <!-- Start Appoinment Area -->
-    <section class="htc__appoinment__area">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-8 offset-xl-2 col-lg-12 col-12">
-                    <div class="section__title text-center">
-                        <h2>Make an Appointment</h2>
-                    </div>
-                    <div class="htc__appoinment__wrap">
-                        <div class="htc__appoinment__form">
-                            <form action="{{route('appointment')}}" method="post" >
-                                @include('frontend.layouts.formSession')
-                            @csrf
-                                <div class="htc__app__box__inner">
-                                    <div class="htc__app__box">
-                                        <div class="input_inner">
-                                            <input type="text" name="fullName" value="{{old('fullName')}}" placeholder="Type Your Full Name">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="htc__app__box__inner">
-                                    <div class="htc__app__box">
-                                        <input type="email" name="email" value="{{old('email')}}" placeholder="Type Your E-mail">
-                                    </div>
-                                </div>
-                                <div class="htc__app__box__inner">
-                                    <div class="htc__app__box">
-                                        <input type="text" name="subject" value="{{old('subject')}}" placeholder="Consulting Subject">
-                                    </div>
-                                    <div class="htc__app__box psy__calendar">
-                                        <input class="date__dropdown" placeholder="Appoinment Date" name="appointDate" type="text" id="datepicker">
-                                    </div>
-                                </div>
-                                <div class="htc__app__box__inner">
 
-                                    <div class="htc__app__box doctor_select">
-                                        <div class="doctor_select_inner">
-                                            <select>
-                                                <option value="1" selected>Department</option>
-                                                <option value="2" >Diabetes</option>
-                                                <option value="3" >Pathology</option>
-                                                <option value="4" >Neonatology</option>
-                                                <option value="5" >Surgery</option>
-                                                <option value="5" >Gastroenterology </option>
-                                            </select>
+        <section class="htc__appoinment__area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-8 offset-xl-2 col-lg-12 col-12">
+                        <div class="section__title text-center">
+                            <h2>Make an Appointment</h2>
+                        </div>
+                        <div class="htc__appoinment__wrap">
+                            <div class="htc__appoinment__form">
+                                <form action="{{route('appointment')}}" method="post" >
+                                    @include('frontend.layouts.formSession')
+                                    @csrf
+                                    <div class="htc__app__box__inner">
+                                        <div class="htc__app__box">
+                                            <div class="input_inner">
+                                                <input type="text" name="fullName" value="{{old('fullName')}}" placeholder="Type Your Full Name">
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="htc__app__box doctor_select">
-                                        <div class="doctor_select_inner">
-                                            <select name="doctor_id">
-                                                <option value="1" selected>Select Doctor</option>
-                                                <option value="2" >Dr. Christine Roberts</option>
-                                                <option value="7" >Dr. AK</option>
-                                                <option value="4" >Dr. Diane Guerrero</option>
-                                                <option value="5" >Dr. Justin Howard</option>
-                                            </select>
+                                    <div class="htc__app__box__inner">
+                                        <div class="htc__app__box">
+                                            <input type="email" name="email" value="{{old('email')}}" placeholder="Type Your E-mail">
                                         </div>
                                     </div>
-                                </div>
-                                <div class="appoinment_message">
-                                    <div class="htc__app__box message">
-                                        <textarea name="message" value="{{old('message')}}" placeholder="Type Additional Message"></textarea>
+                                    <div class="htc__app__box__inner">
+                                        <div class="htc__app__box">
+                                            <input type="text" name="subject" value="{{old('subject')}}" placeholder="Consulting Subject">
+                                        </div>
+                                        <div class="htc__app__box psy__calendar">
+                                            <input class="date__dropdown" placeholder="Appoinment Date" name="appointDate" type="text" id="datepicker">
+                                        </div>
                                     </div>
-                                    <div class="ht__appoin__btn">
-                                        <button type="submit">Send Request</button>
+                                    <div class="htc__app__box__inner">
+
+                                        <div class="htc__app__box doctor_select">
+                                            <div class="doctor_select_inner">
+                                                <select>
+                                                    <option value="1" selected>Department</option>
+                                                    <option value="2" >Diabetes</option>
+                                                    <option value="3" >Pathology</option>
+                                                    <option value="4" >Neonatology</option>
+                                                    <option value="5" >Surgery</option>
+                                                    <option value="5" >Gastroenterology </option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="htc__app__box doctor_select">
+                                            <div class="doctor_select_inner">
+                                                <select name="doctor_id">
+                                                    <option value="1" selected>Select Doctor</option>
+                                                    <option value="2" >Dr. Christine Roberts</option>
+                                                    <option value="7" >Dr. AK</option>
+                                                    <option value="4" >Dr. Diane Guerrero</option>
+                                                    <option value="5" >Dr. Justin Howard</option>
+                                                </select>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                            </form>
+                                    <div class="appoinment_message">
+                                        <div class="htc__app__box message">
+                                            <textarea name="message" value="{{old('message')}}" placeholder="Type Additional Message"></textarea>
+                                        </div>
+                                        <div class="ht__appoin__btn">
+
+                                            <button type="submit">Send Request</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-    </section>
+        </section>
+
+
     <!-- End Appoinment Area -->
 
     <!-- Start Blog Area -->

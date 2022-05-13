@@ -25,7 +25,14 @@
                             </ul>
                         </li>
                         <li class="drop"><a href="{{route('contact')}}">Contact</a></li>
-                        <li class="drop"><a href="{{route('login')}}">Login</a></li>
+                        @auth()
+
+                            <li class="drop"><a href="{{route('patient.dashboard')}}">Dashboard</a></li>
+                        @endauth
+                        @guest()
+                            <li class="drop"><a href="{{route('login')}}">Login</a></li>
+                        @endguest
+
                     </ul>
                 </nav>
             </div>

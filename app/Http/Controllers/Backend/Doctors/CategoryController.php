@@ -17,7 +17,7 @@ class CategoryController extends Controller
     public function index()
     {
         $categories = Category::orderBy('created_at','DESC')->paginate(20);
-        return view('backend.pages.category',compact('categories'));
+        return view('backend.doctors.pages.category',compact('categories'));
     }
 
     /**
@@ -27,7 +27,7 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        return view('backend.pages.createCategory');
+        return view('backend.doctors.pages.createCategory');
     }
 
     /**
@@ -72,7 +72,7 @@ class CategoryController extends Controller
     public function edit(Category $category)
     {
 
-       return view('backend.pages.editCategory',compact('category'));
+       return view('backend.doctors.pages.editCategory',compact('category'));
     }
 
     /**

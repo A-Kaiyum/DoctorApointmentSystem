@@ -1,4 +1,4 @@
-@extends('backend.patients.layouts.master')
+@extends('backend.doctors.layouts.master')
 @section('title','Appointment List')
 @section('content')
 
@@ -55,7 +55,7 @@
                                 @endforeach
                             @else
                                 <tr>
-                                    <td colspan="6">
+                                    <td colspan="8">
                                         <h5 class="text-center">No appointment Found</h5>
                                     </td>
                                 </tr>

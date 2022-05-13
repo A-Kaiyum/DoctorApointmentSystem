@@ -1,4 +1,4 @@
-@extends('backend.layouts.master')
+@extends('backend.patients.layouts.master')
 @section('title','Post')
 @section('content')
 
@@ -8,8 +8,8 @@
                 <div class="card">
                     <div class="card-header">
                         <div class="d-flex justify-content-between align-items-center">
-                            <h3 class="card-title">Post List</h3>
-                            <a href="{{route('admin.post.create')}}" class="btn btn-primary"> Create post</a>
+                            <h3 class="card-title">History List</h3>
+                            <a href="{{route('patient.history.create')}}" class="btn btn-primary"> Create History</a>
                         </div>
                     </div>
                     <!-- /.card-header -->
@@ -20,8 +20,9 @@
                                 <th style="width: 10px">#Sl</th>
                                 <th>Image</th>
                                 <th>Title</th>
-                                <th>Category</th>
-                                <th>Author</th>
+                                <th>Doctor Name</th>
+                                <th>Appointment Date</th>
+                                <th>Description</th>
                                 <th style="width: 40px">Action</th>
 
                             </tr>
@@ -38,16 +39,17 @@
                                             </div>
                                         </td>
                                         <td>{{$post->title}}</td>
-                                        <td>{{$post->category->name}}</td>
-                                        <td>{{$post->user->name}}</td>
+                                        <td>{{$post->doctor}}</td>
+                                        <td>{{$post->appointedDate}}</td>
+                                        <td>{!! $post->description !!}</td>
                                         <td class="d-flex">
-                                            <a href="{{route('admin.post.edit',[$post->id])}}" class="btn btn-sm btn-primary mr-1"> <i class="fas fa-edit"></i></a>
-                                            <form action="{{route('admin.post.destroy',[$post->id])}}" method="post">
+                                            <a href="{{route('patient.history.edit',[$post->id])}}" class="btn btn-sm btn-primary mr-1"> <i class="fas fa-edit"></i></a>
+                                            <form action="{{route('patient.history.destroy',[$post->id])}}" method="post">
                                                 @method('DELETE')
                                                 @csrf
                                                 <button type="submit" class="btn btn-sm btn-danger mr-1"><i class="fas fa-trash"></i></button>
                                             </form>
-                                            <a href="{{route('admin.post.show',[$post->id])}}" class="btn btn-sm btn-success mr-1"> <i class="fas fa-eye"></i></a>
+                                            <a href="{{route('patient.history.show',[$post->id])}}" class="btn btn-sm btn-success mr-1"> <i class="fas fa-eye"></i></a>
                                         </td>
                                     </tr>
                                     <?php $sl++; ?>

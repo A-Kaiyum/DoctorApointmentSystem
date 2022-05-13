@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Http\Controllers\Backend\Hospital;
+namespace App\Http\Controllers\Backend\Patient;
 
-use App\Models\Category;
 use App\Http\Controllers\Controller;
+use App\Models\MedicalHistory;
 use App\Models\Post;
 use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Str;
 
-class PostController extends Controller
+class MedicalHistoryController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -20,9 +20,8 @@ class PostController extends Controller
      */
     public function index()
     {
-        $posts = Post::orderBy('created_at','DESC')->paginate(20);
-      return view('backend.hospitals.pages.post',compact('posts'));
-
+        $posts = MedicalHistory::orderBy('created_at','DESC')->where('user_id',Auth::id())->paginate(20);
+        return view('backend.patients.pages.post',compact('posts'));
     }
 
     /**
@@ -32,8 +31,7 @@ class PostController extends Controller
      */
     public function create()
     {
-        $categories = Category::all();
-        return view('backend.hospitals.pages.createPost',compact('categories'));
+        return view('backend.patients.pages.createPost');
     }
 
     /**
@@ -44,22 +42,20 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-
         $this->validate($request,[
-            'title' => 'required|unique:posts,title',
+            'title' => 'required',
+            'doctor' => 'required',
+            'appointedDate' => 'required',
             'image' =>'required|image',
             'description' => 'required',
-            'category_id' => 'required',
         ]);
-        $post = Post::create([
+        $post = MedicalHistory::create([
             'title' => $request->title,
-            'slug' => Str::slug($request->title),
+            'doctor' => $request->doctor,
+            'appointedDate' => $request->appointedDate,
             'image' => 'image.jpg',
-            'category_id' => $request->category_id,
             'description' => $request->description,
-            //'user_id' => Auth::id(),
-            'user_id' => 1,
-            'published_at' => Carbon::now(),
+            'user_id' => Auth::id(),
 
         ]);
         if($request->hasFile('image')){
@@ -70,74 +66,54 @@ class PostController extends Controller
         }
 
         $post->save();
-        Session::flash('success','Post Created Successfully');
+        Session::flash('success','History Saved Successfully');
         return redirect()->back();
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Post  $post
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Post $post)
+    public function show($id)
     {
-        return view('backend.hospitals.pages.showPost',compact('post'));
+        $post = MedicalHistory::findOrFail($id);
+        return view('backend.patients.pages.showPost',compact('post'));
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Post  $post
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Post $post)
+    public function edit($id)
     {
-        $categories = Category::all();
-        return view('backend.hospitals.pages.editPost',compact(['post','categories']));
+        //
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Post  $post
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Post $post)
+    public function update(Request $request, $id)
     {
-        $this->validate($request,[
-            'title' => "required|unique:posts,title,$post->id",
-            'description' => 'required',
-            'category_id' => 'required',
-        ]);
-
-        $post ->title = $request->title;
-        $post ->slug =Str::slug($request->title);
-        $post-> description = $request->description;
-        $post-> category_id = $request->category_id;
-
-
-        if($request->hasFile('image')) {
-            $image = $request->image;
-            $image_new_name = time() . '.' . $image->getClientOriginalExtension();
-            $image->move('storage/images', $image_new_name);
-            $post->image = '/storage/images/' . $image_new_name;
-
-        }
-        $post->save();
-        Session::flash('success','Post updated Successfully');
-        return redirect()->route('post.index');
+        //
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Post  $post
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Post $post)
+    public function destroy($id)
     {
+        $post = MedicalHistory::findOrFail($id);
         if($post){
             if(file_exists(public_path($post->image))){
                 unlink(public_path($post->image));

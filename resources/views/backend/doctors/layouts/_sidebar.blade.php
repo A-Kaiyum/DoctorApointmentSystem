@@ -9,7 +9,7 @@
     <!-- Sidebar user panel (optional) -->
     <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
-            <img src="{{asset('storage/images/user2-160x160.jpg')}}" class="img-circle elevation-2" alt="User Image">
+            <img src="{{auth()->user()->image}}" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
             <a href="{{route('doctor.dashboard')}}" class="d-block">{{auth()->user()->name}}</a>
@@ -84,7 +84,7 @@
                 </a>
                 <ul class="nav nav-treeview">
                     <li class="nav-item">
-                        <a href="{{route('doctor.post.index')}}" class="nav-link">
+                        <a href="{{route('doctor.appointment.pending')}}" class="nav-link">
                             <i class="fas fa-pen-square nav-icon"></i>
                             <p>Pending Appointment</p>
                         </a>
@@ -96,7 +96,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="{{route('doctor.tag.index')}}" class="nav-link">
+                        <a href="{{route('doctor.appointment.completed')}}" class="nav-link">
                             <i class="fas fa-arrows-alt nav-icon"></i>
                             <p>Completed Appointment</p>
                         </a>
@@ -105,7 +105,7 @@
                 </ul>
             </li>
             <li class="nav-item">
-                <a href="{{route('doctor.user.index')}}" class="nav-link">
+                <a href="{{route('doctor.patientList')}}" class="nav-link">
                     <i class="fas fa-user nav-icon"></i>
                     <p>Patient List</p>
                 </a>
@@ -120,50 +120,14 @@
                 </a>
                 <ul class="nav nav-treeview">
                     <li class="nav-item">
-                        <a href="#" class="nav-link">
+                        <a href="{{route('doctor.contact.index')}}" class="nav-link">
                             <i class="fas fa-address-book nav-icon"></i>
                             <p>Contact</p>
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a href="" class="nav-link">
-                            <i class="fas fa-shuttle-van nav-icon"></i>
-                            <p>Police</p>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="" class="nav-link">
-                            <i class="fas fa-user-md nav-icon"></i>
-                            <p>Doctor</p>
-                        </a>
-                    </li>
-
                 </ul>
             </li>
-            <li class="nav-item">
-                <a href="#" class="nav-link">
-                    <i class="fas fa-burn nav-icon"></i>
-                    <p>
-                        Blood Bank
 
-                    </p>
-                </a>
-                <ul class="nav nav-treeview">
-                    <li class="nav-item">
-                        <a href="" class="nav-link">
-                            <i class="fas fa-envelope nav-icon"></i>
-                            <p>Find Blood</p>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="" class="nav-link">
-                            <i class="fas fa-envelope nav-icon"></i>
-                            <p>Blood Doner</p>
-                        </a>
-                    </li>
-
-                </ul>
-            </li>
             @endif
             <li class="nav-item">
                 <a href="{{route('doctor.profile')}}" class="nav-link">

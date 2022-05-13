@@ -9,7 +9,7 @@
     <!-- Sidebar user panel (optional) -->
     <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
-            <img src="{{asset('storage/images/user2-160x160.jpg')}}" class="img-circle elevation-2" alt="User Image">
+            <img src="{{auth()->user()->image}}" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
             <a href="{{route('hospital.dashboard')}}" class="d-block">Hospital</a>
@@ -77,6 +77,12 @@
                     <a href="{{route('hospital.user.index')}}" class="nav-link">
                         <i class="fas fa-user nav-icon"></i>
                         <p>Patient List</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{route('hospital.post.index')}}" class="nav-link">
+                        <i class="fas fa-user nav-icon"></i>
+                        <p>Make Ads</p>
                     </a>
                 </li>
                 <li class="nav-item">

@@ -1,4 +1,4 @@
-@extends('backend.layouts.master')
+@extends('backend.patients.layouts.master')
 @section('title','Post')
 @section('content')
     <div class="col-lg-12">
@@ -6,8 +6,8 @@
             <div class="card-header">
 
                 <div class="d-flex justify-content-between align-items-center">
-                    <h3 class="card-title">Create post</h3>
-                    <a href="{{route('admin.post.index')}}" class="btn btn-primary"> Go Back</a>
+                    <h3 class="card-title">Create History</h3>
+                    <a href="{{route('patient.history.index')}}" class="btn btn-primary"> Go Back</a>
                 </div>
             </div>
             <!-- /.card-header -->
@@ -17,22 +17,22 @@
                 </div>
 
                 <div class="col-lg-12 col-md-6">
-                    <form action="{{route('admin.post.store')}}" method="POST" enctype="multipart/form-data">
+                    <form action="{{route('patient.history.store')}}" method="POST" enctype="multipart/form-data">
                         @csrf
                         <div class="card-body">
                             <div class="form-group">
-                                <label for="name">Post Title</label>
-                                <input type="text" name="title" value="{{old('title')}}" class="form-control" id="postTitle" placeholder="Enter Post Title">
+                                <label for="name">Title</label>
+                                <input type="text" name="title" value="{{old('title')}}" class="form-control" id="postTitle" placeholder="Enter Title">
                             </div>
                             <div class="form-group">
-                                <label for="category">Select Post Category</label>
-                                <select name="category_id" id="category" class="form-control">
-                                    <option value="" style="display: none" selected>Select Category</option>
-                                    @foreach($categories as $category)
-                                        <option value="{{$category->id}}">{{$category->name}}</option>
-                                    @endforeach
-                                </select>
+                                <label for="name">Doctor Name</label>
+                                <input type="text" name="doctor" value="{{old('doctor')}}" class="form-control" id="postTitle" placeholder="Enter Doctor Name">
                             </div>
+                            <div class="form-group">
+                                <label for="name">Appointment Date</label>
+                                <input type="text" name="appointedDate" value="{{old('appointedDate')}}" class="form-control" id="postTitle" placeholder="Enter Date 01-02-03">
+                            </div>
+
                             <div class="form-group">
                                 <label for="image">Image</label>
                                 <div class="input-group">

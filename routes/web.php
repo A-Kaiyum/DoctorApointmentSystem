@@ -55,7 +55,8 @@ Route::get('/', function () {
     }
     else
     {
-        return view('frontend.pages.index');
+        $doctors = \App\Models\User::where('user_type','doctor')->get();
+        return view('frontend.pages.index',compact('doctors'));
     }
 
 })->name('frontend.index');

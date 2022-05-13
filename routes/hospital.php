@@ -17,7 +17,6 @@ Route::group(['prefix' => 'hospital/', 'as' => 'hospital.', 'middleware' => ['au
     Route::resource('post',PostController::class);
     Route::resource('contact',ContactController::class);
     Route::resource('user',UserController::class);
-
     Route::get('profile',[DashboardController::class,'profile'])->name('profile');
     Route::put('profileUpdate/{id}',[DashboardController::class,'profileUpdate'])->name('profileUpdate');
 

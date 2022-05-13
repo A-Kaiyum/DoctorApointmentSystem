@@ -14,7 +14,7 @@ Route::group(['prefix' => 'patient/', 'as' => 'patient.', 'middleware' => ['auth
     Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
     Route::resource('category',CategoryController::class);
     Route::resource('tag',TagController::class);
-    Route::resource('post',PostController::class);
+    Route::resource('history',\App\Http\Controllers\Backend\Patient\MedicalHistoryController::class);
     Route::resource('contact',ContactController::class);
     Route::resource('user',UserController::class);
     Route::get('appointment',[AppointmentController::class,'index'])->name('appointment.all');

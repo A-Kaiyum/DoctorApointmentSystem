@@ -1,4 +1,4 @@
-@extends('backend.layouts.master')
+@extends('backend.doctors.layouts.master')
 @section('title','Post')
 @section('content')
 

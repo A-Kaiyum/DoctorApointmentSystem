@@ -1,4 +1,4 @@
-@extends('backend.layouts.master')
+@extends('backend.hospitals.layouts.master')
 @section('title','Post')
 @section('content')
     <div class="col-lg-12">
@@ -7,7 +7,7 @@
 
                 <div class="d-flex justify-content-between align-items-center">
                     <h3 class="card-title">Create post</h3>
-                    <a href="{{route('admin.post.index')}}" class="btn btn-primary"> Go Back</a>
+                    <a href="{{route('hospital.post.index')}}" class="btn btn-primary"> Go Back</a>
                 </div>
             </div>
             <!-- /.card-header -->
@@ -17,7 +17,7 @@
                 </div>
 
                 <div class="col-lg-12 col-md-6">
-                    <form action="{{route('admin.post.store')}}" method="POST" enctype="multipart/form-data">
+                    <form action="{{route('hospital.post.store')}}" method="POST" enctype="multipart/form-data">
                         @csrf
                         <div class="card-body">
                             <div class="form-group">

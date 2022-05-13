@@ -1,4 +1,4 @@
-@extends('backend.layouts.master')
+@extends('backend.patients.layouts.master')
 @section('title','Patient List')
 @section('content')
     <section class="content">

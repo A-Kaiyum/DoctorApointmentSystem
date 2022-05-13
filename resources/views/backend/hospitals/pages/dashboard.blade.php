@@ -60,7 +60,7 @@
                 <!-- small box -->
                 <div class="small-box bg-warning">
                     <div class="inner text-center">
-                        <h3>Total Police Provided</h3>
+                        <h3>Total ADs</h3>
 
                         <p>{{30}}</p>
                     </div>

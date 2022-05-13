@@ -11,11 +11,11 @@ class ContactController extends Controller
 {
     public function index(){
         $contacts=Contact::orderBy('id','DESC')->get();
-        return view('backend.pages.contact',compact('contacts'));
+        return view('backend.doctors.pages.contact',compact('contacts'));
     }
     public function show(Contact $contact){
        //$contact = Contact::where('id',$contact_id)->get();
-        return view('backend.pages.showContact',compact('contact'));
+        return view('backend.doctors.pages.showContact',compact('contact'));
     }
     public function destroy(Contact $contact){
         if($contact){

@@ -12,6 +12,9 @@ class DashboardController extends Controller
     public  function index(){
         return view('backend.doctors.pages.dashboard');
     }
+    public  function patientList(){
+        return view('backend.doctors.pages.dashboard');
+    }
     public  function profile(){
         $profile = User::where('id',auth()->user()->id)->first();
         return view('backend.doctors.pages.profile',compact('profile'));

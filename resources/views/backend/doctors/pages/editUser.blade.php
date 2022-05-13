@@ -1,4 +1,4 @@
-@extends('backend.layouts.master')
+@extends('backend.doctors.layouts.master')
 @section('title','user')
 @section('content')
     <div class="col-lg-12">
