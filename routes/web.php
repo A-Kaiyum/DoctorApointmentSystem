@@ -50,7 +50,8 @@ Route::get('/', function () {
     }
         if(Auth::user()->user_type == 'patient')
     {
-        return redirect()->route('patient.dashboard');
+        $doctors = \App\Models\User::where('user_type','doctor')->get();
+        return view('frontend.pages.index',compact('doctors'));
     }
     }
     else

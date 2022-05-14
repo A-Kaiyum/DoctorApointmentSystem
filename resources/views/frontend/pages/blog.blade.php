@@ -8,7 +8,7 @@
                 <div class="col-lg-6 col-md-8 col-12">
                     <div class="ht__header__top__left">
                         <p><span><i class="zmdi zmdi-phone"></i></span>+88 011 2225 555 </p>
-                        <p><span><i class="zmdi zmdi-alarm-check"></i></span>Mon to sat 07 am to 12 am</p>
+                        <p><span><i class="zmdi zmdi-alarm-check"></i></span>{{date('D-M-Y')}}</p>
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-4 col-12">

@@ -9,7 +9,7 @@
                 <div class="col-lg-6 col-md-8 col-12">
                     <div class="ht__header__top__left">
                         <p><span><i class="zmdi zmdi-phone"></i></span>+88 011 2225 555 </p>
-                        <p><span><i class="zmdi zmdi-alarm-check"></i></span>Mon to sat 07 am to 12 am</p>
+                        <p><span><i class="zmdi zmdi-alarm-check"></i></span>{{date('D-M-Y')}}</p>
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-4 col-12">
@@ -136,7 +136,9 @@
                                     <div class="htc__appoinment__wrap">
                                         <h2>Make an Appointment</h2>
                                         <div class="htc__appoinment__form">
-                                            <form action="#">
+                                            <form action="{{route('appointment')}}" method="post">
+                                                @csrf
+                                                @include('frontend.layouts.formSession')
                                                 <div class="doctor_appoinment">
                                                     <div class="doctor_select_inner">
                                                         <select>
@@ -152,17 +154,17 @@
                                                         <select>
                                                             <option value="1" selected>Select Doctor</option>
                                                             <option value="2" >Dr. Christine Roberts</option>
-                                                            <option value="3" >Dr. Jacob Torres</option>
+                                                            <option value="7" >Dr. AK</option>
                                                             <option value="4" >Dr. Diane Guerrero</option>
                                                             <option value="5" >Dr. Justin Howard</option>
                                                         </select>
                                                     </div>
                                                     <div class="input_inner">
-                                                        <input type="text" placeholder="Type Your Full Name">
+                                                        <input type="text" name="fullName" value="{{old('fullName')}}" placeholder="Type Your Full Name">
                                                     </div>
                                                     <div class="input_mobile_number">
                                                         <div class="select">
-                                                            <select name="mobile_number">
+                                                            <select name="phone">
                                                                 <option value="1" selected>+880</option>
                                                                 <option value="2" >+39</option>
                                                                 <option value="3">+90</option>
@@ -173,11 +175,11 @@
                                                             </select>
                                                         </div>
                                                         <div class="number_text">
-                                                            <input type="text" placeholder="Type number">
+                                                            <input type="text" name="phone" value="{{old('phone')}}" placeholder="Type number">
                                                         </div>
                                                     </div>
                                                     <div class="appoinment_date">
-                                                        <input class="date__dropdown" placeholder="DD -- MM - YYYY " type="text" id="datepicker">
+                                                        <input class="date__dropdown" placeholder="DD -- MM - YYYY " name="appointDate"  type="text" id="datepicker">
                                                     </div>
 
 
@@ -216,7 +218,7 @@
                 <div class="col-xl-4 col-lg-4 col-md-6 col-12">
                     <div class="single_special_doctor text-center mb--30">
                         <div class="doctor_image_2">
-                            <img src="images/doctor/2/1.png" alt="">
+                            <img src="{{asset('assets/frontend/images/doctor/2/1.png')}}" alt="">
                         </div>
                         <div class="doctor_brief_desc">
                             <div class="doctor_top_desc">
@@ -233,7 +235,7 @@
                                     <h4>Mon - Sat @ 9.00pm to 12.00am</h4>
                                 </div>
                                 <div class="doctor_view_profile">
-                                    <a href="doctor-details.html">View Profile</a>
+                                    <a href="#">View Profile</a>
                                 </div>
                             </div>
                         </div>
@@ -242,7 +244,7 @@
                 <div class="col-xl-4 col-lg-4 col-md-6 col-12">
                     <div class="single_special_doctor text-center mb--30">
                         <div class="doctor_image_2">
-                            <img src="images/doctor/2/2.png" alt="">
+                            <img src="{{asset('assets/frontend/images/doctor/2/2.png')}}" alt="">
                         </div>
                         <div class="doctor_brief_desc">
                             <div class="doctor_top_desc">
@@ -259,7 +261,7 @@
                                     <h4>Sun - Tues @ 1.00pm to 4.00pm</h4>
                                 </div>
                                 <div class="doctor_view_profile">
-                                    <a href="doctor-details.html">View Profile</a>
+                                    <a href="#">View Profile</a>
                                 </div>
                             </div>
                         </div>
@@ -268,7 +270,7 @@
                 <div class="col-xl-4 col-lg-4 col-md-6 col-12">
                     <div class="single_special_doctor text-center mb--30">
                         <div class="doctor_image_2">
-                            <img src="images/doctor/2/3.png" alt="">
+                            <img src="{{asset('assets/frontend/images/doctor/2/3.png')}}" alt="">
                         </div>
                         <div class="doctor_brief_desc">
                             <div class="doctor_top_desc">
@@ -285,7 +287,7 @@
                                     <h4>Mon - Thrus @ 6.00pm to 9.00pm</h4>
                                 </div>
                                 <div class="doctor_view_profile">
-                                    <a href="doctor-details.html">View Profile</a>
+                                    <a href="#">View Profile</a>
                                 </div>
                             </div>
                         </div>

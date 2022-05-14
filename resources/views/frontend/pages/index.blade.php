@@ -1,6 +1,11 @@
 @extends('frontend.layouts.master')
 @section('title','Hello Doc')
 @section('main-content')
+    <style>
+        .checked {
+            color: orange;
+        }
+    </style>
     <div class="doctor_search_banner_content">
         <div class="container">
             <div class="row">
@@ -90,21 +95,27 @@
                 <div class="col-xl-4 col-lg-4 col-md-6 col-12">
                     <div class="single_special_doctor text-center mb--30">
                         <div class="doctor_image_2">
-                            <img src="{{asset('assets/frontend')}}/images/doctor/2/1.png" alt="">
+                            <img src="{{$doctor->image}}" alt="">
                         </div>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+
                         <div class="doctor_brief_desc">
                             <div class="doctor_top_desc">
                                 <div class="doctor_name">
-                                    <h4>Dr. Robarrt Delok</h4>
+                                    <h4>{{$doctor->name}}</h4>
                                 </div>
                                 <div class="doctor_designation">
-                                    <h5>Nurologiest</h5>
+                                    <h5>{{$doctor->department}}</h5>
                                 </div>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting.</p>
+                                <p>{{$doctor->description}}</p>
                             </div>
                             <div class="doctor_bottom_desc">
                                 <div class="doctor_shecduled_time">
-                                    <h4>Mon - Sat @ 9.00pm to 12.00am</h4>
+                                    <h4>{{$doctor->workingDays}}</h4>
                                 </div>
                                 <div class="doctor_view_profile">
                                     <a href="{{route('drProfile')}}">View Profile</a>
@@ -235,14 +246,14 @@
                     <div class="single_latest_post flex left_grid">
 
                         <div class="ht__blog__thumb">
-                            <a href="{{asset('singleBlog')}}">
+                            <a href="{{route('singleBlog')}}">
                                 <img src="{{asset('assets/frontend')}}/images/blog/latest_post/img-1.png" alt="blog images">
                             </a>
                         </div>
 
                         <div class="htc__blog__content">
                             <div class="blog__post_title">
-                                <h2><a href="{{asset('singleBlog')}}">Best Depression affects children’s mental development.</a></h2>
+                                <h2><a href="{{route('singleBlog')}}">Best Depression affects children’s mental development.</a></h2>
                                 <p>There are many variations of passages of Lorem Ipsum available.</p>
                             </div>
                             <div class="blog_post__meta">
@@ -266,14 +277,14 @@
                     <div class="single_latest_post flex left_grid mt--80">
 
                         <div class="ht__blog__thumb">
-                            <a href="{{asset('singleBlog')}}">
+                            <a href="{{route('singleBlog')}}">
                                 <img src="{{asset('assets/frontend')}}/images/blog/latest_post/img-2.png" alt="blog images">
                             </a>
                         </div>
 
                         <div class="htc__blog__content">
                             <div class="blog__post_title">
-                                <h2><a href="{{asset('singleBlog')}}">Best Depression affects children’s mental development.</a></h2>
+                                <h2><a href="{{route('singleBlog')}}">Best Depression affects children’s mental development.</a></h2>
                                 <p>There are many variations of passages of Lorem Ipsum available.</p>
                             </div>
                             <div class="blog_post__meta">
@@ -298,7 +309,7 @@
                 <div class="col-lg-4 col-xl-5 col-md-6 col-12">
                     <div class="single_latest_post right_grid">
                         <div class="ht__blog__thumb">
-                            <a href="{{asset('singleBlog')}}">
+                            <a href="{{route('singleBlog')}}">
                                 <img src="{{asset('assets/frontend')}}/images/blog/latest_post/img-3.png" alt="blog images">
                             </a>
                         </div>
